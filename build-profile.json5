@@ -1,0 +1,41 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\zfang\\.ohos\\config\\auto_debug_FirstHarmonyDemo_com.zfang.demo_30086000654245395.cer",
+          "storePassword": "0000001BF0A9D1C1F8B03ECFA18F56AEA4E6EAE6DAFAE3BE328591082D2B67C7A6A01C1F374E4BE0CD0046",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B8DA9FB5C208AEB58A58AEA42AACDFCD48E2BB30D8096C353DCFBF3D2A992D4207A582052DE89B7",
+          "profile": "C:\\Users\\zfang\\.ohos\\config\\auto_debug_FirstHarmonyDemo_com.zfang.demo_30086000654245395.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\zfang\\.ohos\\config\\auto_debug_FirstHarmonyDemo_com.zfang.demo_30086000654245395.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
