@@ -3,6 +3,14 @@
     "pages/Index",
     "pages/linear/ColumnPage",
     "pages/linear/RowPage",
-    "pages/linear/ColumnAlignPage"
+    "pages/linear/ColumnAlignPage",
+    "pages/linear/RowAlignPage",
+    "pages/linear/ColumnVPage",
+    "pages/linear/RowVPage",
+    "pages/linear/BlankExample",
+    "pages/linear/LayoutWeightPage",
+    "pages/linear/WidthExample",
+    "pages/linear/ScrollVerticalExample",
+    "pages/linear/ScrollHorizontalExample"
   ]
 }

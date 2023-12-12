@@ -42,6 +42,31 @@ struct Index {
           router.pushUrl({url: 'pages/linear/ColumnAlignPage'})
         })})
 
+        FancyButton({info: 'RowAlign', action: (() => {
+          router.pushUrl({url: 'pages/linear/RowAlignPage'})
+        })})
+        FancyButton({info: 'ColumnVPage', action: (() => {
+          router.pushUrl({url: 'pages/linear/ColumnVPage'})
+        })})
+        FancyButton({info: 'RowVPage', action: (() => {
+          router.pushUrl({url: 'pages/linear/RowVPage'})
+        })})
+        FancyButton({info: 'BlankExample', action: (() => {
+          router.pushUrl({url: 'pages/linear/BlankExample'})
+        })})
+        FancyButton({info: 'LayoutWeightPage', action: (() => {
+          router.pushUrl({url: 'pages/linear/LayoutWeightPage'})
+        })})
+        FancyButton({info: 'WidthExample', action: (() => {
+          router.pushUrl({url: 'pages/linear/WidthExample'})
+        })})
+        FancyButton({info: 'ScrollVerticalExample', action: (() => {
+          router.pushUrl({url: 'pages/linear/ScrollVerticalExample'})
+        })})
+        FancyButton({info: 'ScrollHorizontalExample', action: (() => {
+          router.pushUrl({url: 'pages/linear/ScrollHorizontalExample'})
+        })})
+
       }
       .width('100%')
     }
@@ -61,14 +86,14 @@ struct FancyButton {
       top: 20
     })
     .backgroundColor("#0D9FFB")
-    .width('40%')
+    .width('45%')
     .height('5%')
   }
 
   build() {
 
     Button() {
-      Text(this.info).fancy(FontWeight.Bold, 30)
+      Text(this.info).fancy(FontWeight.Normal, 20)
     }.cuteButton().type(ButtonType.Capsule).onClick(() => {
       {
         this.action.call(this)
