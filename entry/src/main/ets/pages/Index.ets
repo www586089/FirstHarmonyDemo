@@ -11,8 +11,6 @@ import router from '@ohos.router'
 struct Index {
   @State message: string = 'Hello World'
 
-
-
   @Styles cuteButton() {
     .margin({
       top: 20
@@ -22,112 +20,116 @@ struct Index {
     .height('5%')
   }
 
+  itemList: object[] = [
+    { info: "ColumnPage", action: ((event?: ClickEvent) => {
+      console.info(`Succeeded in clicking the 'Next' button.`)
+      router.pushUrl({ url: 'pages/linear/ColumnPage' }).then(() => {
+        console.info('Succeeded in jumping to the second page.')
+      }).catch((err) => {
+        console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
+      })
+    }) },
+    { info: "RowPage", action: ((event?: ClickEvent) => {
+      router.pushUrl({ url: 'pages/linear/RowPage' })
+    }) },
+    { info: "ColumnAlign", action: ((event?: ClickEvent) => {
+      router.pushUrl({ url: 'pages/linear/ColumnAlignPage' })
+    }) },
+    { info: 'RowAlign', action: (() => {
+      router.pushUrl({ url: 'pages/linear/RowAlignPage' })
+    }) },
+    { info: 'ColumnVPage', action: (() => {
+      router.pushUrl({ url: 'pages/linear/ColumnVPage' })
+    }) },
+    { info: 'RowVPage', action: (() => {
+      router.pushUrl({ url: 'pages/linear/RowVPage' })
+    }) },
+    { info: 'BlankExample', action: (() => {
+      router.pushUrl({ url: 'pages/linear/BlankExample' })
+    }) },
+    { info: 'LayoutWeightPage', action: (() => {
+      router.pushUrl({ url: 'pages/linear/LayoutWeightPage' })
+    }) },
+    { info: 'WidthExample', action: (() => {
+      router.pushUrl({ url: 'pages/linear/WidthExample' })
+    }) },
+    { info: 'ScrollVerticalExample', action: (() => {
+      router.pushUrl({ url: 'pages/linear/ScrollVerticalExample' })
+    }) },
+    { info: 'ScrollHorizontalExample', action: (() => {
+      router.pushUrl({ url: 'pages/linear/ScrollHorizontalExample' })
+    }) },
+
+    //Stack begin
+    { info: 'StackLayout', action: (() => {
+      router.pushUrl({ url: 'pages/stack/StackLayout' })
+    }) },
+    { info: 'StackZIndex', action: (() => {
+      router.pushUrl({ url: 'pages/stack/StackZIndex' })
+    }) },
+    { info: 'StackExample', action: (() => {
+      router.pushUrl({ url: 'pages/stack/StackExample' })
+    }) },
+    //--->end
+
+    //Flex begin
+    { info: 'FlexLayout', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexLayout' })
+    }) },
+    { info: 'FlexWrapPage', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexWrapPage' })
+    }) },
+    { info: 'FlexChildAlign', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexChildAlign' })
+    }) },
+    { info: 'FlexAlignItems', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexAlignItems' })
+    }) },
+    { info: 'FlexAlignContent', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexAlignContent' })
+    }) },
+    { info: 'FlexAlignChildSelf', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexAlignChildSelf' })
+    }) },
+    { info: 'FlexStrech', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexStrech' })
+    }) },
+    { info: 'FlexExample', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexExample' })
+    }) },
+    //---->end
+
+
+    //Flex begin
+    { info: 'CityList', action: (() => {
+      router.pushUrl({ url: 'pages/list/CityList' })
+    }) },
+    { info: 'ContactsList', action: (() => {
+      router.pushUrl({ url: 'pages/list/ContactsList' })
+    }) },
+    { info: 'ContactsListMore', action: (() => {
+      router.pushUrl({ url: 'pages/list/ContactsListMore' })
+    }) },
+    { info: 'MessageList', action: (() => {
+      router.pushUrl({ url: 'pages/list/MessageList' })
+    }) },
+    { info: 'ToDoListPage', action: (() => {
+      router.pushUrl({ url: 'pages/list/ToDoListPage' })
+    }) },
+  //---->
+  ]
 
   build() {
-    Row() {
-      Column() {
-        FancyButton({info: 'ColumPage', action: (() => {
-          console.info(`Succeeded in clicking the 'Next' button.`)
-          router.pushUrl({ url: 'pages/list/MessageList'}).then(() => {
-            console.info('Succeeded in jumping to the second page.')
-          }).catch((err) => {
-            console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
-          })
-        })})
-        FancyButton({info: 'RowPage', action: (() => {
-          router.pushUrl({url: 'pages/linear/RowPage'})
-        })})
-
-        FancyButton({info: 'ColumnAlign', action: (() => {
-          router.pushUrl({url: 'pages/linear/ColumnAlignPage'})
-        })})
-
-        FancyButton({info: 'RowAlign', action: (() => {
-          router.pushUrl({url: 'pages/linear/RowAlignPage'})
-        })})
-        FancyButton({info: 'ColumnVPage', action: (() => {
-          router.pushUrl({url: 'pages/linear/ColumnVPage'})
-        })})
-        FancyButton({info: 'RowVPage', action: (() => {
-          router.pushUrl({url: 'pages/linear/RowVPage'})
-        })})
-        FancyButton({info: 'BlankExample', action: (() => {
-          router.pushUrl({url: 'pages/linear/BlankExample'})
-        })})
-        FancyButton({info: 'LayoutWeightPage', action: (() => {
-          router.pushUrl({url: 'pages/linear/LayoutWeightPage'})
-        })})
-        FancyButton({info: 'WidthExample', action: (() => {
-          router.pushUrl({url: 'pages/linear/WidthExample'})
-        })})
-        FancyButton({info: 'ScrollVerticalExample', action: (() => {
-          router.pushUrl({url: 'pages/linear/ScrollVerticalExample'})
-        })})
-        FancyButton({info: 'ScrollHorizontalExample', action: (() => {
-          router.pushUrl({url: 'pages/linear/ScrollHorizontalExample'})
-        })})
-
-        //Stack begin
-        FancyButton({info: 'StackLayout', action: (() => {
-          router.pushUrl({url: 'pages/stack/StackLayout'})
-        })})
-        FancyButton({info: 'StackZIndex', action: (() => {
-          router.pushUrl({url: 'pages/stack/StackZIndex'})
-        })})
-        FancyButton({info: 'StackExample', action: (() => {
-          router.pushUrl({url: 'pages/stack/StackExample'})
-        })})
-        //--->end
-
-        //Flex begin
-        FancyButton({info: 'FlexLayout', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexLayout'})
-        })})
-        FancyButton({info: 'FlexWrapPage', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexWrapPage'})
-        })})
-        FancyButton({info: 'FlexChildAlign', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexChildAlign'})
-        })})
-        FancyButton({info: 'FlexAlignItems', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexAlignItems'})
-        })})
-        FancyButton({info: 'FlexAlignContent', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexAlignContent'})
-        })})
-        FancyButton({info: 'FlexAlignChildSelf', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexAlignChildSelf'})
-        })})
-        FancyButton({info: 'FlexStrech', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexStrech'})
-        })})
-        FancyButton({info: 'FlexExample', action: (() => {
-          router.pushUrl({url: 'pages/flex/FlexExample'})
-        })})
-        //---->end
-
-
-        //Flex begin
-        FancyButton({info: 'CityList', action: (() => {
-          router.pushUrl({url: 'pages/list/CityList'})
-        })})
-        FancyButton({info: 'ContactsList', action: (() => {
-          router.pushUrl({url: 'pages/list/ContactsList'})
-        })})
-        FancyButton({info: 'ContactsListMore', action: (() => {
-          router.pushUrl({url: 'pages/list/ContactsListMore'})
-        })})
-        FancyButton({info: 'MessageList', action: (() => {
-          router.pushUrl({url: 'pages/list/MessageList'})
-        })})
-        FancyButton({info: 'ToDoListPage', action: (() => {
-          router.pushUrl({url: 'pages/list/ToDoListPage'})
-        })})
-        //---->
-      }
-      .width('100%')
-    }
-    .height('100%')
+    List() {
+      ForEach(this.itemList, (item) => {
+        ListItem() {
+          FancyButton({ info: item.info, action: (() => {
+            item.action.call()
+          }) })
+        }
+      }, item => item.info)
+    }.alignListItem(ListItemAlign.Center)
+    .height('100%').width('100%')
   }
 }
 
