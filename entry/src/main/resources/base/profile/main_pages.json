@@ -22,6 +22,12 @@
     "pages/flex/FlexAlignChildSelf",
     "pages/flex/FlexAlignContent",
     "pages/flex/FlexStrech",
-    "pages/flex/FlexExample"
+    "pages/flex/FlexExample",
+    "pages/list/CityList",
+    "pages/list/SimpleContacts",
+    "pages/list/ContactsList",
+    "pages/list/ContactsListMore",
+    "pages/list/MessageList",
+    "pages/list/ToDoListPage"
   ]
 }

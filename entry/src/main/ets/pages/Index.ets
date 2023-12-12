@@ -28,7 +28,7 @@ struct Index {
       Column() {
         FancyButton({info: 'ColumPage', action: (() => {
           console.info(`Succeeded in clicking the 'Next' button.`)
-          router.pushUrl({ url: 'pages/linear/ColumnPage'}).then(() => {
+          router.pushUrl({ url: 'pages/list/MessageList'}).then(() => {
             console.info('Succeeded in jumping to the second page.')
           }).catch((err) => {
             console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
@@ -105,6 +105,25 @@ struct Index {
           router.pushUrl({url: 'pages/flex/FlexExample'})
         })})
         //---->end
+
+
+        //Flex begin
+        FancyButton({info: 'CityList', action: (() => {
+          router.pushUrl({url: 'pages/list/CityList'})
+        })})
+        FancyButton({info: 'ContactsList', action: (() => {
+          router.pushUrl({url: 'pages/list/ContactsList'})
+        })})
+        FancyButton({info: 'ContactsListMore', action: (() => {
+          router.pushUrl({url: 'pages/list/ContactsListMore'})
+        })})
+        FancyButton({info: 'MessageList', action: (() => {
+          router.pushUrl({url: 'pages/list/MessageList'})
+        })})
+        FancyButton({info: 'ToDoListPage', action: (() => {
+          router.pushUrl({url: 'pages/list/ToDoListPage'})
+        })})
+        //---->
       }
       .width('100%')
     }
