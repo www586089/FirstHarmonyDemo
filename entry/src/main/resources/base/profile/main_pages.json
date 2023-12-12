@@ -11,6 +11,9 @@
     "pages/linear/LayoutWeightPage",
     "pages/linear/WidthExample",
     "pages/linear/ScrollVerticalExample",
-    "pages/linear/ScrollHorizontalExample"
+    "pages/linear/ScrollHorizontalExample",
+    "pages/stack/StackLayout",
+    "pages/stack/StackZIndex",
+    "pages/stack/StackExample"
   ]
 }

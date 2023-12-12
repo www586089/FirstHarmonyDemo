@@ -67,6 +67,17 @@ struct Index {
           router.pushUrl({url: 'pages/linear/ScrollHorizontalExample'})
         })})
 
+        //Stack begin
+        FancyButton({info: 'StackLayout', action: (() => {
+          router.pushUrl({url: 'pages/stack/StackLayout'})
+        })})
+        FancyButton({info: 'StackZIndex', action: (() => {
+          router.pushUrl({url: 'pages/stack/StackZIndex'})
+        })})
+        FancyButton({info: 'StackExample', action: (() => {
+          router.pushUrl({url: 'pages/stack/StackExample'})
+        })})
+        //--->end
       }
       .width('100%')
     }
