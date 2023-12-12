@@ -2,6 +2,7 @@
   "src": [
     "pages/Index",
     "pages/linear/ColumnPage",
-    "pages/linear/RowPage"
+    "pages/linear/RowPage",
+    "pages/linear/ColumnAlignPage"
   ]
 }
