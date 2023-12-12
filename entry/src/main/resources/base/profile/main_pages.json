@@ -14,6 +14,14 @@
     "pages/linear/ScrollHorizontalExample",
     "pages/stack/StackLayout",
     "pages/stack/StackZIndex",
-    "pages/stack/StackExample"
+    "pages/stack/StackExample",
+    "pages/flex/FlexLayout",
+    "pages/flex/FlexWrapPage",
+    "pages/flex/FlexChildAlign",
+    "pages/flex/FlexAlignItems",
+    "pages/flex/FlexAlignChildSelf",
+    "pages/flex/FlexAlignContent",
+    "pages/flex/FlexStrech",
+    "pages/flex/FlexExample"
   ]
 }

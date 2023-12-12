@@ -78,6 +78,33 @@ struct Index {
           router.pushUrl({url: 'pages/stack/StackExample'})
         })})
         //--->end
+
+        //Flex begin
+        FancyButton({info: 'FlexLayout', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexLayout'})
+        })})
+        FancyButton({info: 'FlexWrapPage', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexWrapPage'})
+        })})
+        FancyButton({info: 'FlexChildAlign', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexChildAlign'})
+        })})
+        FancyButton({info: 'FlexAlignItems', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexAlignItems'})
+        })})
+        FancyButton({info: 'FlexAlignContent', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexAlignContent'})
+        })})
+        FancyButton({info: 'FlexAlignChildSelf', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexAlignChildSelf'})
+        })})
+        FancyButton({info: 'FlexStrech', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexStrech'})
+        })})
+        FancyButton({info: 'FlexExample', action: (() => {
+          router.pushUrl({url: 'pages/flex/FlexExample'})
+        })})
+        //---->end
       }
       .width('100%')
     }
