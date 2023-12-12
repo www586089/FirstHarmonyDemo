@@ -1,15 +1,14 @@
 import router from '@ohos.router'
 
+
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
   .fontWeight(fontWeight)
   .fontSize(fontSize)
 }
 
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World'
+struct StackDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -21,21 +20,17 @@ struct Index {
   }
 
   itemList: object[] = [
-    {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
+    { info: 'StackLayout', action: (() => {
+      router.pushUrl({ url: 'pages/stack/StackLayout' })
     }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
+    { info: 'StackZIndex', action: (() => {
+      router.pushUrl({ url: 'pages/stack/StackZIndex' })
     }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
+    { info: 'StackExample', action: (() => {
+      router.pushUrl({ url: 'pages/stack/StackExample' })
     }) },
   ]
+
 
   build() {
     List() {

@@ -28,6 +28,10 @@
     "pages/list/ContactsList",
     "pages/list/ContactsListMore",
     "pages/list/MessageList",
-    "pages/list/ToDoListPage"
+    "pages/list/ToDoListPage",
+    "pages/linear/LLDemoPage",
+    "pages/stack/StackDemoPage",
+    "pages/flex/FlexDemoPage",
+    "pages/list/ListDemoPage"
   ]
 }

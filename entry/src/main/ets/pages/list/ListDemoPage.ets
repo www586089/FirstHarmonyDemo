@@ -1,15 +1,14 @@
 import router from '@ohos.router'
 
+
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
   .fontWeight(fontWeight)
   .fontSize(fontSize)
 }
 
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World'
+struct ListDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -21,21 +20,23 @@ struct Index {
   }
 
   itemList: object[] = [
-    {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
+    { info: 'CityList', action: (() => {
+      router.pushUrl({ url: 'pages/list/CityList' })
     }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
+    { info: 'ContactsList', action: (() => {
+      router.pushUrl({ url: 'pages/list/ContactsList' })
     }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
+    { info: 'ContactsListMore', action: (() => {
+      router.pushUrl({ url: 'pages/list/ContactsListMore' })
+    }) },
+    { info: 'MessageList', action: (() => {
+      router.pushUrl({ url: 'pages/list/MessageList' })
+    }) },
+    { info: 'ToDoListPage', action: (() => {
+      router.pushUrl({ url: 'pages/list/ToDoListPage' })
     }) },
   ]
+
 
   build() {
     List() {

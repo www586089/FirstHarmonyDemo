@@ -1,15 +1,14 @@
 import router from '@ohos.router'
 
+
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
   .fontWeight(fontWeight)
   .fontSize(fontSize)
 }
 
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World'
+struct FlexDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -21,21 +20,34 @@ struct Index {
   }
 
   itemList: object[] = [
-    {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
+  //Flex begin
+    { info: 'FlexLayout', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexLayout' })
     }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
+    { info: 'FlexWrapPage', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexWrapPage' })
     }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
+    { info: 'FlexChildAlign', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexChildAlign' })
     }) },
+    { info: 'FlexAlignItems', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexAlignItems' })
+    }) },
+    { info: 'FlexAlignContent', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexAlignContent' })
+    }) },
+    { info: 'FlexAlignChildSelf', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexAlignChildSelf' })
+    }) },
+    { info: 'FlexStrech', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexStrech' })
+    }) },
+    { info: 'FlexExample', action: (() => {
+      router.pushUrl({ url: 'pages/flex/FlexExample' })
+    }) },
+  //---->end
   ]
+
 
   build() {
     List() {
