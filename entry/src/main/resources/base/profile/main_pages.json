@@ -45,6 +45,11 @@
     "pages/grid/GridOrderPage",
     "pages/grid/GridRowExample",
     "pages/config/MediaQueryDemoPage",
-    "pages/config/MediaQueryExample"
+    "pages/config/MediaQueryExample",
+    "pages/gridlayout/GridLayoutDemoPage",
+    "pages/gridlayout/GridLayoutPage1",
+    "pages/gridlayout/CalculatorLayoutPage",
+    "pages/gridlayout/GridLayoutPage2",
+    "pages/gridlayout/GridScrollLayoutPage"
   ]
 }

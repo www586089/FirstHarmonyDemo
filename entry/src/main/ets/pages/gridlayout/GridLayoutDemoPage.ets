@@ -1,15 +1,14 @@
 import router from '@ohos.router'
 
+
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
   .fontWeight(fontWeight)
   .fontSize(fontSize)
 }
 
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World'
+struct GridLayoutDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -21,33 +20,23 @@ struct Index {
   }
 
   itemList: object[] = [
-    {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
+    { info: 'GridLayoutPage1', action: (() => {
+      router.pushUrl({ url: 'pages/gridlayout/GridLayoutPage1' })
     }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
+    { info: 'CalculatorLayoutPage', action: (() => {
+      router.pushUrl({ url: 'pages/gridlayout/CalculatorLayoutPage' })
     }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
+    { info: 'GridLayoutPage2', action: (() => {
+      router.pushUrl({ url: 'pages/gridlayout/GridLayoutPage2' })
     }) },
-    { info: 'RelativeLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/relative/RelativeLayoutDemoPage' })
+    { info: 'GridScrollLayoutPage', action: (() => {
+      router.pushUrl({ url: 'pages/gridlayout/GridScrollLayoutPage' })
     }) },
-    { info: 'GridDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/grid/GridDemoPage' })
-    }) },
-    { info: 'MediaQueryDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/config/MediaQueryDemoPage' })
-    }) },
-    { info: 'GridLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/GridLayoutDemoPage' })
+    { info: 'ToDoListPage', action: (() => {
+      router.pushUrl({ url: 'pages/list/ToDoListPage' })
     }) },
   ]
+
 
   build() {
     List() {
