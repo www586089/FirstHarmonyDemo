@@ -50,6 +50,9 @@ struct Index {
     { info: 'SwiperDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/swiper/SwiperDemoPage' })
     }) },
+    { info: 'RouterDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/router/RouterDemoPage' })
+    }) },
   ]
 
   build() {

@@ -54,6 +54,13 @@
     "pages/swiper/SwiperDemoPage",
     "pages/swiper/SwiperPage1",
     "pages/swiper/SwipeIndicatorPage",
-    "pages/swiper/SwipeControlPage"
+    "pages/swiper/SwipeControlPage",
+    "pages/router/RouterDemoPage",
+    "pages/router/GoodsDetailPage",
+    "pages/router/RouterStandardPage",
+    "pages/router/RouterLoginPage",
+    "pages/router/RouterMinePage",
+    "pages/router/RouterWithParamsPage",
+    "pages/router/ParamsShowPage"
   ]
 }
