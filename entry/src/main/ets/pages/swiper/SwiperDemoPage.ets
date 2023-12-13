@@ -1,15 +1,14 @@
 import router from '@ohos.router'
 
+
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
   .fontWeight(fontWeight)
   .fontSize(fontSize)
 }
 
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World'
+struct SwiperDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -21,36 +20,23 @@ struct Index {
   }
 
   itemList: object[] = [
-    {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
+    { info: 'SwiperPage1', action: (() => {
+      router.pushUrl({ url: 'pages/swiper/SwiperPage1' })
     }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
+    { info: 'SwipeIndicatorPage', action: (() => {
+      router.pushUrl({ url: 'pages/swiper/SwipeIndicatorPage' })
     }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
+    { info: 'SwipeControlPage', action: (() => {
+      router.pushUrl({ url: 'pages/swiper/SwipeControlPage' })
     }) },
-    { info: 'RelativeLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/relative/RelativeLayoutDemoPage' })
+    { info: 'GridScrollLayoutPage', action: (() => {
+      router.pushUrl({ url: 'pages/gridlayout/GridScrollLayoutPage' })
     }) },
-    { info: 'GridDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/grid/GridDemoPage' })
-    }) },
-    { info: 'MediaQueryDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/config/MediaQueryDemoPage' })
-    }) },
-    { info: 'GridLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/GridLayoutDemoPage' })
-    }) },
-    { info: 'SwiperDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/swiper/SwiperDemoPage' })
+    { info: 'ToDoListPage', action: (() => {
+      router.pushUrl({ url: 'pages/list/ToDoListPage' })
     }) },
   ]
+
 
   build() {
     List() {

@@ -50,6 +50,10 @@
     "pages/gridlayout/GridLayoutPage1",
     "pages/gridlayout/CalculatorLayoutPage",
     "pages/gridlayout/GridLayoutPage2",
-    "pages/gridlayout/GridScrollLayoutPage"
+    "pages/gridlayout/GridScrollLayoutPage",
+    "pages/swiper/SwiperDemoPage",
+    "pages/swiper/SwiperPage1",
+    "pages/swiper/SwipeIndicatorPage",
+    "pages/swiper/SwipeControlPage"
   ]
 }
