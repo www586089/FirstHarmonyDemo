@@ -53,6 +53,9 @@ struct Index {
     { info: 'RouterDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/router/RouterDemoPage' })
     }) },
+    { info: 'NavigationDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/nav/NavigationDemoPage' })
+    }) },
   ]
 
   build() {

@@ -61,6 +61,8 @@
     "pages/router/RouterLoginPage",
     "pages/router/RouterMinePage",
     "pages/router/RouterWithParamsPage",
-    "pages/router/ParamsShowPage"
+    "pages/router/ParamsShowPage",
+    "pages/nav/NavigationDemoPage",
+    "pages/nav/NavigationExample"
   ]
 }
