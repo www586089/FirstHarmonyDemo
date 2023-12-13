@@ -1,15 +1,14 @@
 import router from '@ohos.router'
 
+
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
   .fontWeight(fontWeight)
   .fontSize(fontSize)
 }
 
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World'
+struct GridDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -21,27 +20,29 @@ struct Index {
   }
 
   itemList: object[] = [
-    {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
+    { info: 'GridRow1Page', action: (() => {
+      router.pushUrl({ url: 'pages/grid/GridRow1Page' })
     }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
+    { info: 'GridRow2Page', action: (() => {
+      router.pushUrl({ url: 'pages/grid/GridRow2Page' })
     }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
+    { info: 'GridRow3Page', action: (() => {
+      router.pushUrl({ url: 'pages/grid/GridRow3Page' })
     }) },
-    { info: 'RelativeLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/relative/RelativeLayoutDemoPage' })
+    { info: 'GridSpanPage', action: (() => {
+      router.pushUrl({ url: 'pages/grid/GridSpanPage' })
     }) },
-    { info: 'GridDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/grid/GridDemoPage' })
+    { info: 'GridOffsetPage', action: (() => {
+      router.pushUrl({ url: 'pages/grid/GridOffsetPage' })
+    }) },
+    { info: 'GridOrderPage', action: (() => {
+      router.pushUrl({ url: 'pages/grid/GridOrderPage' })
+    }) },
+    { info: 'GridRowExample', action: (() => {
+      router.pushUrl({ url: 'pages/grid/GridRowExample' })
     }) },
   ]
+
 
   build() {
     List() {

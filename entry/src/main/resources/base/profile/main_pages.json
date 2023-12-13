@@ -35,6 +35,14 @@
     "pages/list/ListDemoPage",
     "pages/relative/RelativeContainerPage",
     "pages/relative/RelativeLayoutSample",
-    "pages/relative/RelativeLayoutDemoPage"
+    "pages/relative/RelativeLayoutDemoPage",
+    "pages/grid/GridDemoPage",
+    "pages/grid/GridRow1Page",
+    "pages/grid/GridRow2Page",
+    "pages/grid/GridRow3Page",
+    "pages/grid/GridSpanPage",
+    "pages/grid/GridOffsetPage",
+    "pages/grid/GridOrderPage",
+    "pages/grid/GridRowExample"
   ]
 }
