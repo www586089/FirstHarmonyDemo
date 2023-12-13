@@ -43,6 +43,8 @@
     "pages/grid/GridSpanPage",
     "pages/grid/GridOffsetPage",
     "pages/grid/GridOrderPage",
-    "pages/grid/GridRowExample"
+    "pages/grid/GridRowExample",
+    "pages/config/MediaQueryDemoPage",
+    "pages/config/MediaQueryExample"
   ]
 }

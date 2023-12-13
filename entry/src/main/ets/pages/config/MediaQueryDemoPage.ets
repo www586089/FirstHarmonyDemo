@@ -1,15 +1,14 @@
 import router from '@ohos.router'
 
+
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
   .fontWeight(fontWeight)
   .fontSize(fontSize)
 }
 
-
 @Entry
 @Component
-struct Index {
-  @State message: string = 'Hello World'
+struct MediaQueryDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -21,30 +20,11 @@ struct Index {
   }
 
   itemList: object[] = [
-    {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
-    }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
-    }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
-    }) },
-    { info: 'RelativeLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/relative/RelativeLayoutDemoPage' })
-    }) },
-    { info: 'GridDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/grid/GridDemoPage' })
-    }) },
-    { info: 'MediaQueryDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/config/MediaQueryDemoPage' })
+    { info: 'MediaQueryExample', action: (() => {
+      router.pushUrl({ url: 'pages/config/MediaQueryExample' })
     }) },
   ]
+
 
   build() {
     List() {
