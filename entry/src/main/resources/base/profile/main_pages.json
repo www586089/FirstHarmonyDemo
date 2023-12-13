@@ -32,6 +32,9 @@
     "pages/linear/LLDemoPage",
     "pages/stack/StackDemoPage",
     "pages/flex/FlexDemoPage",
-    "pages/list/ListDemoPage"
+    "pages/list/ListDemoPage",
+    "pages/relative/RelativeContainerPage",
+    "pages/relative/RelativeLayoutSample",
+    "pages/relative/RelativeLayoutDemoPage"
   ]
 }
