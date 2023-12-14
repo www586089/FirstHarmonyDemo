@@ -22,10 +22,13 @@ struct Index {
 
   itemList: object[] = [
     {
+      info: "DemoPage", action: (() => {
+      router.pushUrl({ url: 'pages/demo/DemoPage' })
+    }) },
+    {
       info: "LLDemoPage", action: (() => {
       router.pushUrl({ url: 'pages/list/LLDemoPage' })
-    })
-    },
+    }) },
     { info: 'StackDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/stack/StackDemoPage' })
     }) },

@@ -64,6 +64,8 @@
     "pages/router/ParamsShowPage",
     "pages/nav/NavigationDemoPage",
     "pages/nav/NavigationExample",
-    "pages/list/SectorGridPage"
+    "pages/list/SectorGridPage",
+    "pages/demo/todo/ToDoListDemoPage",
+    "pages/demo/DemoPage"
   ]
 }
