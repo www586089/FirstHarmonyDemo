@@ -35,6 +35,9 @@ struct ListDemoPage {
     { info: 'ToDoListPage', action: (() => {
       router.pushUrl({ url: 'pages/list/ToDoListPage' })
     }) },
+    { info: 'SectorGridPage', action: (() => {
+      router.pushUrl({ url: 'pages/list/SectorGridPage' })
+    }) },
   ]
 
 
