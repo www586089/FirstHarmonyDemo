@@ -59,6 +59,9 @@ struct Index {
     { info: 'NavigationDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/nav/NavigationDemoPage' })
     }) },
+    { info: 'TabDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/nav/tab/TabDemoPage' })
+    }) },
   ]
 
   build() {
