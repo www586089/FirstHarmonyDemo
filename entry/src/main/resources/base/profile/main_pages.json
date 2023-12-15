@@ -71,6 +71,7 @@
     "pages/nav/tab/TabHomePage",
     "pages/nav/tab/TabVerticalPage",
     "pages/nav/tab/NestTabPage",
-    "pages/nav/tab/ScrollTabsPage"
+    "pages/nav/tab/ScrollTabsPage",
+    "pages/nav/NavHomePage"
   ]
 }

@@ -27,7 +27,7 @@ struct Index {
     }) },
     {
       info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/list/LLDemoPage' })
+      router.pushUrl({ url: 'pages/linear/LLDemoPage' })
     }) },
     { info: 'StackDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/stack/StackDemoPage' })

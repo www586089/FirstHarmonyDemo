@@ -29,6 +29,9 @@ struct NavigationDemoPage {
     { info: 'RouterWithParamsPage', action: (() => {
       router.pushUrl({ url: 'pages/router/RouterWithParamsPage' })
     }) },
+    { info: 'NavHomePage', action: (() => {
+      router.pushUrl({ url: 'pages/nav/NavHomePage' })
+    }) },
   ]
 
 

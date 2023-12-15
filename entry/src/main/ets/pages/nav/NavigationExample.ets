@@ -24,7 +24,7 @@ struct NavigationExample {
                   .fontWeight(500)
                   .textAlign(TextAlign.Center)
                 NavDestination() {
-                  Text("NavDestinationContent" + item)
+                  Text("NavDestinationContent" + item).height('100%').width('100%').backgroundColor("#67c8ff")
                 }
                 .title("NavDestinationTitle" + item)
               }
@@ -35,13 +35,14 @@ struct NavigationExample {
         .margin({ top: 12 })
       }
       .title("主标题")
+      .titleMode(NavigationTitleMode.Full)
       .mode(NavigationMode.Stack)
       .menus([
-        {value: "", icon: "./ap/ic_public_search.svg", action: ()=> {}},
-        {value: "", icon: "./image/ic_public_add.svg", action: ()=> {}},
-        {value: "", icon: "./image/ic_public_add.svg", action: ()=> {}},
-        {value: "", icon: "./image/ic_public_add.svg", action: ()=> {}},
-        {value: "", icon: "./image/ic_public_add.svg", action: ()=> {}}
+        {value: "A", icon: "./ap/ic_public_search.svg", action: ()=> {}},
+        {value: "B", icon: "./image/ic_public_add.svg", action: ()=> {}},
+        {value: "C", icon: "./image/ic_public_add.svg", action: ()=> {}},
+        {value: "D", icon: "./image/ic_public_add.svg", action: ()=> {}},
+        {value: "E", icon: "./image/ic_public_add.svg", action: ()=> {}}
       ])
       .toolBar({items: [
         {value: "func", icon: "./image/ic_public_highlights.svg", action: ()=> {}},

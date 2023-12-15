@@ -2,7 +2,7 @@
 @Component
 struct ScrollVerticalExample {
   scroller: Scroller = new Scroller();
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  private arr: number[] = [0];
 
   build() {
     Scroll(this.scroller) {
@@ -18,7 +18,8 @@ struct ScrollVerticalExample {
             .margin({ top: 10 })
         }, item => item)
       }.width('100%')
-    }
+    }.align(Alignment.TopStart)
+    .height("100%")
     .backgroundColor(0xDCDCDC)
     .scrollable(ScrollDirection.Vertical) // 滚动方向为垂直方向
     .scrollBar(BarState.On) // 滚动条常驻显示
