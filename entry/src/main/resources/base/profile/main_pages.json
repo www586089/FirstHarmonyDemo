@@ -72,6 +72,10 @@
     "pages/nav/tab/TabVerticalPage",
     "pages/nav/tab/NestTabPage",
     "pages/nav/tab/ScrollTabsPage",
-    "pages/nav/NavHomePage"
+    "pages/nav/NavHomePage",
+    "pages/cm/ButtonDemoPage",
+    "pages/cm/ImageSelectPage",
+    "pages/cm/ImageFitPage",
+    "pages/cm/ImageDemoPage"
   ]
 }

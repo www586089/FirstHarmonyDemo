@@ -62,6 +62,9 @@ struct Index {
     { info: 'TabDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/nav/tab/TabDemoPage' })
     }) },
+    { info: 'ImageDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/cm/ImageDemoPage' })
+    }) },
   ]
 
   build() {
