@@ -76,6 +76,8 @@
     "pages/cm/ButtonDemoPage",
     "pages/cm/ImageSelectPage",
     "pages/cm/ImageFitPage",
-    "pages/cm/ImageDemoPage"
+    "pages/cm/ImageDemoPage",
+    "pages/cm/shape/ShapeDemoPage",
+    "pages/cm/shape/ShapeTest1Page"
   ]
 }

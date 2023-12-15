@@ -65,6 +65,9 @@ struct Index {
     { info: 'ImageDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/cm/ImageDemoPage' })
     }) },
+    { info: 'ShapeDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/cm/shape/ShapeDemoPage' })
+    }) },
   ]
 
   build() {

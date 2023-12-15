@@ -1,6 +1,3 @@
-import picker from '@ohos.file.picker';
-import http from '@ohos.net.http';
-import image from '@ohos.multimedia.image';
 import router from '@ohos.router'
 
 
@@ -11,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct ImageDemoPage {
+struct ShapeDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -23,11 +20,8 @@ struct ImageDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'ImageSelectPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/ImageSelectPage' })
-    }) },
-    { info: 'ImageFitPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/ImageFitPage' })
+    { info: 'ShapeTest1Page', action: (() => {
+      router.pushUrl({ url: 'pages/cm/shape/ShapeTest1Page' })
     }) },
   ]
 
