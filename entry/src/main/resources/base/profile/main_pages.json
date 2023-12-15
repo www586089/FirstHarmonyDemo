@@ -85,6 +85,7 @@
     "pages/cm/canvas/DrawImageExamplePage",
     "pages/cm/canvas/GradientDemoPage",
     "pages/cm/canvas/ClearRectPage",
-    "pages/cm/canvas/Path2dPage"
+    "pages/cm/canvas/Path2dPage",
+    "pages/demo/healthy/HealthyHomePage"
   ]
 }
