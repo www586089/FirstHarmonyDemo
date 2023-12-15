@@ -78,6 +78,13 @@
     "pages/cm/ImageFitPage",
     "pages/cm/ImageDemoPage",
     "pages/cm/shape/ShapeDemoPage",
-    "pages/cm/shape/ShapeTest1Page"
+    "pages/cm/shape/ShapeTest1Page",
+    "pages/cm/canvas/CanvasDemoPage",
+    "pages/cm/canvas/CanvasExample1",
+    "pages/cm/canvas/CanvasExample2",
+    "pages/cm/canvas/DrawImageExamplePage",
+    "pages/cm/canvas/GradientDemoPage",
+    "pages/cm/canvas/ClearRectPage",
+    "pages/cm/canvas/Path2dPage"
   ]
 }
