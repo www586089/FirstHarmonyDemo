@@ -71,6 +71,9 @@ struct Index {
     { info: 'CanvasDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/cm/canvas/CanvasDemoPage' })
     }) },
+    { info: 'PropertyAnimDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/anim/PropertyAnimDemoPage' })
+    }) },
   ]
 
   build() {

@@ -86,6 +86,14 @@
     "pages/cm/canvas/GradientDemoPage",
     "pages/cm/canvas/ClearRectPage",
     "pages/cm/canvas/Path2dPage",
-    "pages/demo/healthy/HealthyHomePage"
+    "pages/demo/healthy/HealthyHomePage",
+    "pages/anim/PropertyAnimDemoPage",
+    "pages/anim/PropertyAnim1Page",
+    "pages/anim/scene/TransitionScenePage",
+    "pages/anim/scene/TransitionScene2Page",
+    "pages/anim/scene/ShareTransitionFirstPage",
+    "pages/anim/scene/ShareTransitionSecondPage",
+    "pages/anim/scene/PageTransitionSrc",
+    "pages/anim/scene/PageTransitionDst"
   ]
 }
