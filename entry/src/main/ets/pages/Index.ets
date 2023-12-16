@@ -74,6 +74,9 @@ struct Index {
     { info: 'PropertyAnimDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/anim/PropertyAnimDemoPage' })
     }) },
+    { info: 'StateManagerDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/state/StateManagerDemoPage' })
+    }) },
   ]
 
   build() {

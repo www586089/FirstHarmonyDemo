@@ -94,6 +94,11 @@
     "pages/anim/scene/ShareTransitionFirstPage",
     "pages/anim/scene/ShareTransitionSecondPage",
     "pages/anim/scene/PageTransitionSrc",
-    "pages/anim/scene/PageTransitionDst"
+    "pages/anim/scene/PageTransitionDst",
+    "pages/state/StateManagerDemoPage",
+    "pages/state/PropDemoPage",
+    "pages/state/LinkDemoPage",
+    "pages/state/ProvideConsumeDemoPage",
+    "pages/state/WatchDemoPage"
   ]
 }
