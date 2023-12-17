@@ -23,8 +23,8 @@ struct NetworkDemoPage {
     { info: 'NetworkCompPage', action: (() => {
       router.pushUrl({ url: 'pages/net/NetworkCompPage' })
     }) },
-    { info: 'RouterLoginPage', action: (() => {
-      router.pushUrl({ url: 'pages/router/RouterLoginPage' })
+    { info: 'HttpTestDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/net/http/HttpTestDemoPage' })
     }) },
     { info: 'RouterWithParamsPage', action: (() => {
       router.pushUrl({ url: 'pages/router/RouterWithParamsPage' })

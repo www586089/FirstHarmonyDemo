@@ -101,6 +101,7 @@
     "pages/state/ProvideConsumeDemoPage",
     "pages/state/WatchDemoPage",
     "pages/net/NetworkDemoPage",
-    "pages/net/NetworkCompPage"
+    "pages/net/NetworkCompPage",
+    "pages/net/http/HttpTestDemoPage"
   ]
 }
