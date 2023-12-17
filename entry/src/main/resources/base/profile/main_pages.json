@@ -99,6 +99,8 @@
     "pages/state/PropDemoPage",
     "pages/state/LinkDemoPage",
     "pages/state/ProvideConsumeDemoPage",
-    "pages/state/WatchDemoPage"
+    "pages/state/WatchDemoPage",
+    "pages/net/NetworkDemoPage",
+    "pages/net/NetworkCompPage"
   ]
 }

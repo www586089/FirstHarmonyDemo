@@ -77,6 +77,9 @@ struct Index {
     { info: 'StateManagerDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/state/StateManagerDemoPage' })
     }) },
+    { info: 'NetworkDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/net/NetworkDemoPage' })
+    }) },
   ]
 
   build() {
