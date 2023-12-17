@@ -26,8 +26,8 @@ struct NetworkDemoPage {
     { info: 'HttpTestDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/net/http/HttpTestDemoPage' })
     }) },
-    { info: 'RouterWithParamsPage', action: (() => {
-      router.pushUrl({ url: 'pages/router/RouterWithParamsPage' })
+    { info: 'HttpPromiseDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/net/http/HttpPromiseDemoPage' })
     }) },
     { info: 'NavHomePage', action: (() => {
       router.pushUrl({ url: 'pages/nav/NavHomePage' })
