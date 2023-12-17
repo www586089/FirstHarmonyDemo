@@ -33,7 +33,7 @@ struct HttpTestDemoPage {
         bottom: 24,
         left: 12,
         right: 12
-      }).borderRadius(12).borderColor(Color.Red)
+      }).borderRadius(12).borderColor(Color.Red).borderWidth(1.5)
     }.width('100%').padding(12)
     .height('100%')
   }
