@@ -103,6 +103,7 @@
     "pages/net/NetworkDemoPage",
     "pages/net/NetworkCompPage",
     "pages/net/http/HttpTestDemoPage",
-    "pages/net/http/HttpPromiseDemoPage"
+    "pages/net/http/HttpPromiseDemoPage",
+    "pages/swiper/demo/VerticalScrollPage"
   ]
 }

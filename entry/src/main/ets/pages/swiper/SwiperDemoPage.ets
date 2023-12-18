@@ -29,8 +29,8 @@ struct SwiperDemoPage {
     { info: 'SwipeControlPage', action: (() => {
       router.pushUrl({ url: 'pages/swiper/SwipeControlPage' })
     }) },
-    { info: 'GridScrollLayoutPage', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/GridScrollLayoutPage' })
+    { info: 'VerticalScrollPage', action: (() => {
+      router.pushUrl({ url: 'pages/swiper/demo/VerticalScrollPage' })
     }) },
     { info: 'ToDoListPage', action: (() => {
       router.pushUrl({ url: 'pages/list/ToDoListPage' })
