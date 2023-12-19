@@ -105,6 +105,8 @@
     "pages/net/http/HttpTestDemoPage",
     "pages/net/http/HttpPromiseDemoPage",
     "pages/swiper/demo/VerticalScrollPage",
-    "pages/state/StateDemoPage"
+    "pages/state/StateDemoPage",
+    "pages/state/prop/PropDemo2Page",
+    "pages/state/prop/PropDemo3Page"
   ]
 }
