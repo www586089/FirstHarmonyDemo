@@ -1,6 +1,3 @@
-import picker from '@ohos.file.picker';
-import http from '@ohos.net.http';
-import image from '@ohos.multimedia.image';
 import router from '@ohos.router'
 
 
@@ -11,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct ImageDemoPage {
+struct TabDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -23,11 +20,17 @@ struct ImageDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'ImageSelectPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/ImageSelectPage' })
+    { info: 'TabHomePage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/nav/tab/TabHomePage' })
     }) },
-    { info: 'ImageFitPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/ImageFitPage' })
+    { info: 'TabVerticalPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/nav/tab/TabVerticalPage' })
+    }) },
+    { info: 'NestTabPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/nav/tab/NestTabPage' })
+    }) },
+    { info: 'ScrollTabsPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/nav/tab/ScrollTabsPage' })
     }) },
   ]
 

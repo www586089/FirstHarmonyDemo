@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct ListDemoPage {
+struct CanvasDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,23 +20,23 @@ struct ListDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'CityList', action: (() => {
-      router.pushUrl({ url: 'pages/list/CityList' })
+    { info: 'CanvasExample1', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/canvas/CanvasExample1' })
     }) },
-    { info: 'ContactsList', action: (() => {
-      router.pushUrl({ url: 'pages/list/ContactsList' })
+    { info: 'CanvasExample2', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/canvas/CanvasExample2' })
     }) },
-    { info: 'ContactsListMore', action: (() => {
-      router.pushUrl({ url: 'pages/list/ContactsListMore' })
+    { info: 'DrawImageExamplePage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/canvas/DrawImageExamplePage' })
     }) },
-    { info: 'MessageList', action: (() => {
-      router.pushUrl({ url: 'pages/list/MessageList' })
+    { info: 'GradientDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/canvas/GradientDemoPage' })
     }) },
-    { info: 'ToDoListPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ToDoListPage' })
+    { info: 'ClearRect', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/canvas/ClearRect' })
     }) },
-    { info: 'SectorGridPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/SectorGridPage' })
+    { info: 'Path2dPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/canvas/Path2dPage' })
     }) },
   ]
 

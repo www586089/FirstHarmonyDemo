@@ -22,41 +22,41 @@ struct LLDemoPage {
   itemList: object[] = [
     { info: "ColumnPage", action: ((event?: ClickEvent) => {
       console.info(`Succeeded in clicking the 'Next' button.`)
-      router.pushUrl({ url: 'pages/linear/ColumnPage' }).then(() => {
+      router.pushUrl({ url: 'pages/ui/linear/ColumnPage' }).then(() => {
         console.info('Succeeded in jumping to the second page.')
       }).catch((err) => {
         console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
       })
     }) },
     { info: "RowPage", action: ((event?: ClickEvent) => {
-      router.pushUrl({ url: 'pages/linear/RowPage' })
+      router.pushUrl({ url: 'pages/ui/linear/RowPage' })
     }) },
     { info: "ColumnAlign", action: ((event?: ClickEvent) => {
-      router.pushUrl({ url: 'pages/linear/ColumnAlignPage' })
+      router.pushUrl({ url: 'pages/ui/linear/ColumnAlignPage' })
     }) },
     { info: 'RowAlign', action: (() => {
-      router.pushUrl({ url: 'pages/linear/RowAlignPage' })
+      router.pushUrl({ url: 'pages/ui/linear/RowAlignPage' })
     }) },
     { info: 'ColumnVPage', action: (() => {
-      router.pushUrl({ url: 'pages/linear/ColumnVPage' })
+      router.pushUrl({ url: 'pages/ui/linear/ColumnVPage' })
     }) },
     { info: 'RowVPage', action: (() => {
-      router.pushUrl({ url: 'pages/linear/RowVPage' })
+      router.pushUrl({ url: 'pages/ui/linear/RowVPage' })
     }) },
     { info: 'BlankExample', action: (() => {
-      router.pushUrl({ url: 'pages/linear/BlankExample' })
+      router.pushUrl({ url: 'pages/ui/linear/BlankExample' })
     }) },
     { info: 'LayoutWeightPage', action: (() => {
-      router.pushUrl({ url: 'pages/linear/LayoutWeightPage' })
+      router.pushUrl({ url: 'pages/ui/linear/LayoutWeightPage' })
     }) },
     { info: 'WidthExample', action: (() => {
-      router.pushUrl({ url: 'pages/linear/WidthExample' })
+      router.pushUrl({ url: 'pages/ui/linear/WidthExample' })
     }) },
     { info: 'ScrollVerticalExample', action: (() => {
-      router.pushUrl({ url: 'pages/linear/ScrollVerticalExample' })
+      router.pushUrl({ url: 'pages/ui/linear/ScrollVerticalExample' })
     }) },
     { info: 'ScrollHorizontalExample', action: (() => {
-      router.pushUrl({ url: 'pages/linear/ScrollHorizontalExample' })
+      router.pushUrl({ url: 'pages/ui/linear/ScrollHorizontalExample' })
     }) },
   ]
 

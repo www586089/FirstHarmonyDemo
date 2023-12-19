@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct PropertyAnimDemoPage {
+struct RelativeLayoutDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,17 +20,11 @@ struct PropertyAnimDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'PropertyAnim1Page', action: (() => {
-      router.pushUrl({ url: 'pages/anim/PropertyAnim1Page' })
+    { info: 'RelativeContainerPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/relative/RelativeContainerPage' })
     }) },
-    { info: 'TransitionScenePage', action: (() => {
-      router.pushUrl({ url: 'pages/anim/scene/TransitionScenePage' })
-    }) },
-    { info: 'TransitionScene2Page', action: (() => {
-      router.pushUrl({ url: 'pages/anim/scene/TransitionScene2Page' })
-    }) },
-    { info: 'ShareTransitionFirstPage', action: (() => {
-      router.pushUrl({ url: 'pages/anim/scene/ShareTransitionFirstPage' })
+    { info: 'RelativeLayoutSample', action: (() => {
+      router.pushUrl({ url: 'pages/ui/relative/RelativeLayoutSample' })
     }) },
   ]
 

@@ -22,28 +22,28 @@ struct FlexDemoPage {
   itemList: object[] = [
   //Flex begin
     { info: 'FlexLayout', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexLayout' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexLayout' })
     }) },
     { info: 'FlexWrapPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexWrapPage' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexWrapPage' })
     }) },
     { info: 'FlexChildAlign', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexChildAlign' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexChildAlign' })
     }) },
     { info: 'FlexAlignItems', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexAlignItems' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexAlignItems' })
     }) },
     { info: 'FlexAlignContent', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexAlignContent' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexAlignContent' })
     }) },
     { info: 'FlexAlignChildSelf', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexAlignChildSelf' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexAlignChildSelf' })
     }) },
     { info: 'FlexStrech', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexStrech' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexStrech' })
     }) },
     { info: 'FlexExample', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexExample' })
+      router.pushUrl({ url: 'pages/ui/flex/FlexExample' })
     }) },
   //---->end
   ]

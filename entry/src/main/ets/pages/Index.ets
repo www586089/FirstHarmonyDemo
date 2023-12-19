@@ -22,60 +22,18 @@ struct Index {
 
   itemList: object[] = [
     {
-      info: "DemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/demo/DemoPage' })
+      info: "UI组件的使用", action: (() => {
+      router.pushUrl({ url: 'pages/ui/UIDemoPage' })
     }) },
     {
-      info: "LLDemoPage", action: (() => {
-      router.pushUrl({ url: 'pages/linear/LLDemoPage' })
-    }) },
-    { info: 'StackDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackDemoPage' })
-    }) },
-    { info: 'FlexDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/flex/FlexDemoPage' })
-    }) },
-    { info: 'ListDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ListDemoPage' })
-    }) },
-    { info: 'RelativeLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/relative/RelativeLayoutDemoPage' })
-    }) },
-    { info: 'GridDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/grid/GridDemoPage' })
+      info: "DemoPage", action: (() => {
+      router.pushUrl({ url: 'pages/demo/DemoPage' })
     }) },
     { info: 'MediaQueryDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/config/MediaQueryDemoPage' })
     }) },
-    { info: 'GridLayoutDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/GridLayoutDemoPage' })
-    }) },
-    { info: 'SwiperDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/swiper/SwiperDemoPage' })
-    }) },
     { info: 'RouterDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/router/RouterDemoPage' })
-    }) },
-    { info: 'NavigationDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/nav/NavigationDemoPage' })
-    }) },
-    { info: 'TabDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/nav/tab/TabDemoPage' })
-    }) },
-    { info: 'ImageDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/ImageDemoPage' })
-    }) },
-    { info: 'ShapeDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/shape/ShapeDemoPage' })
-    }) },
-    { info: 'CanvasDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/canvas/CanvasDemoPage' })
-    }) },
-    { info: 'PropertyAnimDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/anim/PropertyAnimDemoPage' })
-    }) },
-    { info: 'StateManagerDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/state/StateManagerDemoPage' })
     }) },
     { info: 'NetworkDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/net/NetworkDemoPage' })

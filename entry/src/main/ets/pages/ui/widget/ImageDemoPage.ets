@@ -1,4 +1,4 @@
-import router from '@ohos.router'
+import router from '@ohos.router';
 
 
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct GridLayoutDemoPage {
+struct ImageDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,20 +20,11 @@ struct GridLayoutDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'GridLayoutPage1', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/GridLayoutPage1' })
+    { info: 'ImageSelectPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageSelectPage' })
     }) },
-    { info: 'CalculatorLayoutPage', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/CalculatorLayoutPage' })
-    }) },
-    { info: 'GridLayoutPage2', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/GridLayoutPage2' })
-    }) },
-    { info: 'GridScrollLayoutPage', action: (() => {
-      router.pushUrl({ url: 'pages/gridlayout/GridScrollLayoutPage' })
-    }) },
-    { info: 'ToDoListPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ToDoListPage' })
+    { info: 'ImageFitPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageFitPage' })
     }) },
   ]
 

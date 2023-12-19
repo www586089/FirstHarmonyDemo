@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct NavigationDemoPage {
+struct GridDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,17 +20,26 @@ struct NavigationDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'NavigationExample', action: (() => {
-      router.pushUrl({ url: 'pages/nav/NavigationExample' })
+    { info: 'GridRow1Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/grid/GridRow1Page' })
     }) },
-    { info: 'RouterLoginPage', action: (() => {
-      router.pushUrl({ url: 'pages/router/RouterLoginPage' })
+    { info: 'GridRow2Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/grid/GridRow2Page' })
     }) },
-    { info: 'RouterWithParamsPage', action: (() => {
-      router.pushUrl({ url: 'pages/router/RouterWithParamsPage' })
+    { info: 'GridRow3Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/grid/GridRow3Page' })
     }) },
-    { info: 'NavHomePage', action: (() => {
-      router.pushUrl({ url: 'pages/nav/NavHomePage' })
+    { info: 'GridSpanPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/grid/GridSpanPage' })
+    }) },
+    { info: 'GridOffsetPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/grid/GridOffsetPage' })
+    }) },
+    { info: 'GridOrderPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/grid/GridOrderPage' })
+    }) },
+    { info: 'GridRowExample', action: (() => {
+      router.pushUrl({ url: 'pages/ui/grid/GridRowExample' })
     }) },
   ]
 

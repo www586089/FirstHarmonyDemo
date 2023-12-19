@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct SwiperDemoPage {
+struct NavigationDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,20 +20,17 @@ struct SwiperDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'SwiperPage1', action: (() => {
-      router.pushUrl({ url: 'pages/swiper/SwiperPage1' })
+    { info: 'NavigationExample', action: (() => {
+      router.pushUrl({ url: 'pages/ui/nav/NavigationExample' })
     }) },
-    { info: 'SwipeIndicatorPage', action: (() => {
-      router.pushUrl({ url: 'pages/swiper/SwipeIndicatorPage' })
+    { info: 'RouterLoginPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/router/RouterLoginPage' })
     }) },
-    { info: 'SwipeControlPage', action: (() => {
-      router.pushUrl({ url: 'pages/swiper/SwipeControlPage' })
+    { info: 'RouterWithParamsPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/router/RouterWithParamsPage' })
     }) },
-    { info: 'VerticalScrollPage', action: (() => {
-      router.pushUrl({ url: 'pages/swiper/demo/VerticalScrollPage' })
-    }) },
-    { info: 'ToDoListPage', action: (() => {
-      router.pushUrl({ url: 'pages/list/ToDoListPage' })
+    { info: 'NavHomePage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/nav/NavHomePage' })
     }) },
   ]
 

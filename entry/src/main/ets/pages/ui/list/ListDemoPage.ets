@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct StackDemoPage {
+struct ListDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,14 +20,23 @@ struct StackDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'StackLayout', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackLayout' })
+    { info: 'CityList', action: (() => {
+      router.pushUrl({ url: 'pages/ui/list/CityList' })
     }) },
-    { info: 'StackZIndex', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackZIndex' })
+    { info: 'ContactsList', action: (() => {
+      router.pushUrl({ url: 'pages/ui/list/ContactsList' })
     }) },
-    { info: 'StackExample', action: (() => {
-      router.pushUrl({ url: 'pages/stack/StackExample' })
+    { info: 'ContactsListMore', action: (() => {
+      router.pushUrl({ url: 'pages/ui/list/ContactsListMore' })
+    }) },
+    { info: 'MessageList', action: (() => {
+      router.pushUrl({ url: 'pages/ui/list/MessageList' })
+    }) },
+    { info: 'ToDoListPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/list/ToDoListPage' })
+    }) },
+    { info: 'SectorGridPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/list/SectorGridPage' })
     }) },
   ]
 

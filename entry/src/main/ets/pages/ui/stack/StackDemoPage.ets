@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct CanvasDemoPage {
+struct StackDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,23 +20,14 @@ struct CanvasDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'CanvasExample1', action: (() => {
-      router.pushUrl({ url: 'pages/cm/canvas/CanvasExample1' })
+    { info: 'StackLayout', action: (() => {
+      router.pushUrl({ url: 'pages/ui/stack/StackLayout' })
     }) },
-    { info: 'CanvasExample2', action: (() => {
-      router.pushUrl({ url: 'pages/cm/canvas/CanvasExample2' })
+    { info: 'StackZIndex', action: (() => {
+      router.pushUrl({ url: 'pages/ui/stack/StackZIndex' })
     }) },
-    { info: 'DrawImageExamplePage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/canvas/DrawImageExamplePage' })
-    }) },
-    { info: 'GradientDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/canvas/GradientDemoPage' })
-    }) },
-    { info: 'ClearRect', action: (() => {
-      router.pushUrl({ url: 'pages/cm/canvas/ClearRect' })
-    }) },
-    { info: 'Path2dPage', action: (() => {
-      router.pushUrl({ url: 'pages/cm/canvas/Path2dPage' })
+    { info: 'StackExample', action: (() => {
+      router.pushUrl({ url: 'pages/ui/stack/StackExample' })
     }) },
   ]
 

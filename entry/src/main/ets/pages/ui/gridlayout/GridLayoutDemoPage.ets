@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct RelativeLayoutDemoPage {
+struct GridLayoutDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,11 +20,20 @@ struct RelativeLayoutDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'RelativeContainerPage', action: (() => {
-      router.pushUrl({ url: 'pages/relative/RelativeContainerPage' })
+    { info: 'GridLayoutPage1', action: (() => {
+      router.pushUrl({ url: 'pages/ui/gridlayout/GridLayoutPage1' })
     }) },
-    { info: 'RelativeLayoutSample', action: (() => {
-      router.pushUrl({ url: 'pages/relative/RelativeLayoutSample' })
+    { info: 'CalculatorLayoutPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/gridlayout/CalculatorLayoutPage' })
+    }) },
+    { info: 'GridLayoutPage2', action: (() => {
+      router.pushUrl({ url: 'pages/ui/gridlayout/GridLayoutPage2' })
+    }) },
+    { info: 'GridScrollLayoutPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/gridlayout/GridScrollLayoutPage' })
+    }) },
+    { info: 'ToDoListPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/list/ToDoListPage' })
     }) },
   ]
 

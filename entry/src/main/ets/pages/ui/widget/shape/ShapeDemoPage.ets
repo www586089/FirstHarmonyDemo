@@ -21,7 +21,7 @@ struct ShapeDemoPage {
 
   itemList: object[] = [
     { info: 'ShapeTest1Page', action: (() => {
-      router.pushUrl({ url: 'pages/cm/shape/ShapeTest1Page' })
+      router.pushUrl({ url: 'pages/ui/widget/shape/ShapeTest1Page' })
     }) },
   ]
 
