@@ -29,6 +29,9 @@ struct Index {
       info: "状态管理", action: (() => {
       router.pushUrl({ url: 'pages/state/StateManagerDemoPage' })
     }) },
+    { info: '窗口管理', action: (() => {
+      router.pushUrl({ url: 'pages/window/WindowDemoPage' })
+    }) },
     {
       info: "DemoPage", action: (() => {
       router.pushUrl({ url: 'pages/demo/DemoPage' })

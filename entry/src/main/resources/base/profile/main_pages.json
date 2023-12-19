@@ -111,6 +111,9 @@
     "pages/state/link/LinkDemo1Page",
     "pages/state/link/LinkDemo2Page",
     "pages/state/multi/ProvideConsumeDemo2Page",
-    "pages/ui/UIDemoPage"
+    "pages/ui/UIDemoPage",
+    "pages/window/WindowDemoPage",
+    "pages/window/BasicWindowDemoPage",
+    "pages/window/VerifySmsPage"
   ]
 }

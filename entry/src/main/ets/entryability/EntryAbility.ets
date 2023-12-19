@@ -1,7 +1,8 @@
 import UIAbility from '@ohos.app.ability.UIAbility';
 import hilog from '@ohos.hilog';
 import window from '@ohos.window';
-import { Constant } from '../pages/utils/Constant';
+import { Constant } from '../utils/Constant';
+import { WindowManager } from '../window/WindowManger';
 
 export default class EntryAbility extends UIAbility {
   onCreate(want, launchParam) {
@@ -14,6 +15,7 @@ export default class EntryAbility extends UIAbility {
 
 
   onWindowStageCreate(windowStage: window.WindowStage) {
+    WindowManager.getInstance().setWindowStage(windowStage)
     // 1.获取应用主窗口。
     let window: window.Window = null;
     windowStage.getMainWindow((err, data) => {
