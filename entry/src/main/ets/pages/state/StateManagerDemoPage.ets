@@ -21,10 +21,22 @@ struct StateManagerDemoPage {
 
   itemList: object[] = [
     { info: 'PropDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/state/PropDemoPage' })
+      router.pushUrl({ url: 'pages/state/prop/PropDemoPage' })
+    }) },
+    { info: 'PropDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/prop/PropDemo2Page' })
+    }) },
+    { info: 'PropDemo3Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/prop/PropDemo3Page' })
     }) },
     { info: 'LinkDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/state/LinkDemoPage' })
+      router.pushUrl({ url: 'pages/state/link/LinkDemoPage' })
+    }) },
+    { info: 'LinkDemo1Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/link/LinkDemo1Page' })
+    }) },
+    { info: 'LinkDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/link/LinkDemo2Page' })
     }) },
     { info: 'ProvideConsumeDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/state/ProvideConsumeDemoPage' })

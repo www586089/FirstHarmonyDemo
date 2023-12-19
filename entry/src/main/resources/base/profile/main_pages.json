@@ -96,8 +96,8 @@
     "pages/anim/scene/PageTransitionSrc",
     "pages/anim/scene/PageTransitionDst",
     "pages/state/StateManagerDemoPage",
-    "pages/state/PropDemoPage",
-    "pages/state/LinkDemoPage",
+    "pages/state/prop/PropDemoPage",
+    "pages/state/link/LinkDemoPage",
     "pages/state/ProvideConsumeDemoPage",
     "pages/state/WatchDemoPage",
     "pages/net/NetworkDemoPage",
@@ -107,6 +107,8 @@
     "pages/swiper/demo/VerticalScrollPage",
     "pages/state/StateDemoPage",
     "pages/state/prop/PropDemo2Page",
-    "pages/state/prop/PropDemo3Page"
+    "pages/state/prop/PropDemo3Page",
+    "pages/state/link/LinkDemo1Page",
+    "pages/state/link/LinkDemo2Page"
   ]
 }
