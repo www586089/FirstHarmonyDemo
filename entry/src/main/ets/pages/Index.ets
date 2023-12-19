@@ -53,7 +53,7 @@ struct Index {
           }) })
         }
       }, item => item.info)
-    }.alignListItem(ListItemAlign.Center)
+    }.alignListItem(ListItemAlign.Center).margin({top: 48})
     .height('100%').width('100%')
   }
 }
