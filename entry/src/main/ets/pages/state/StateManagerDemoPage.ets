@@ -39,7 +39,10 @@ struct StateManagerDemoPage {
       router.pushUrl({ url: 'pages/state/link/LinkDemo2Page' })
     }) },
     { info: 'ProvideConsumeDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/state/ProvideConsumeDemoPage' })
+      router.pushUrl({ url: 'pages/state/multi/ProvideConsumeDemoPage' })
+    }) },
+    { info: 'ProvideConsumeDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/multi/ProvideConsumeDemo2Page' })
     }) },
     { info: 'WatchDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/state/WatchDemoPage' })

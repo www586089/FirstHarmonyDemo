@@ -98,7 +98,7 @@
     "pages/state/StateManagerDemoPage",
     "pages/state/prop/PropDemoPage",
     "pages/state/link/LinkDemoPage",
-    "pages/state/ProvideConsumeDemoPage",
+    "pages/state/multi/ProvideConsumeDemoPage",
     "pages/state/WatchDemoPage",
     "pages/net/NetworkDemoPage",
     "pages/net/NetworkCompPage",
@@ -109,6 +109,7 @@
     "pages/state/prop/PropDemo2Page",
     "pages/state/prop/PropDemo3Page",
     "pages/state/link/LinkDemo1Page",
-    "pages/state/link/LinkDemo2Page"
+    "pages/state/link/LinkDemo2Page",
+    "pages/state/multi/ProvideConsumeDemo2Page"
   ]
 }
