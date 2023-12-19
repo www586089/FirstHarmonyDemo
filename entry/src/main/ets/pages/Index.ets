@@ -26,6 +26,10 @@ struct Index {
       router.pushUrl({ url: 'pages/ui/UIDemoPage' })
     }) },
     {
+      info: "状态管理", action: (() => {
+      router.pushUrl({ url: 'pages/state/StateManagerDemoPage' })
+    }) },
+    {
       info: "DemoPage", action: (() => {
       router.pushUrl({ url: 'pages/demo/DemoPage' })
     }) },
