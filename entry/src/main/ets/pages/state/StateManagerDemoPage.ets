@@ -32,6 +32,9 @@ struct StateManagerDemoPage {
     { info: 'WatchDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/state/WatchDemoPage' })
     }) },
+    { info: 'StateDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/state/StateDemoPage' })
+    }) },
   ]
 
 
