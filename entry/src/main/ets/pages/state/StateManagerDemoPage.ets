@@ -50,6 +50,15 @@ struct StateManagerDemoPage {
     { info: 'StateDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/state/StateDemoPage' })
     }) },
+    { info: '嵌套对象变化', action: (() => {
+      router.pushUrl({ url: 'pages/state/complex/NestObjectDemoPage' })
+    }) },
+    { info: '对象数组变化', action: (() => {
+      router.pushUrl({ url: 'pages/state/complex/ObjectArrayDemoPage' })
+    }) },
+    { info: '二维数组变化', action: (() => {
+      router.pushUrl({ url: 'pages/state/complex/NestObjectDemo2Page' })
+    }) },
   ]
 
 
@@ -63,7 +72,7 @@ struct StateManagerDemoPage {
         }
       }, item => item.info)
     }.alignListItem(ListItemAlign.Center)
-    .height('100%').width('100%')
+    .height('100%').width('100%').margin({top: 48})
   }
 }
 

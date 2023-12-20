@@ -114,6 +114,9 @@
     "pages/ui/UIDemoPage",
     "pages/window/WindowDemoPage",
     "pages/window/BasicWindowDemoPage",
-    "pages/window/VerifySmsPage"
+    "pages/window/VerifySmsPage",
+    "pages/state/complex/NestObjectDemoPage",
+    "pages/state/complex/ObjectArrayDemoPage",
+    "pages/state/complex/NestObjectDemo2Page"
   ]
 }
