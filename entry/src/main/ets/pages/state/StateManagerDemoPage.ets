@@ -71,6 +71,19 @@ struct StateManagerDemoPage {
     { info: 'LocalStorageDemo4Page', action: (() => {
       router.pushUrl({ url: 'pages/state/storage/local/LocalStorageDemo4Page' })
     }) },
+
+    { info: 'AppStorageDemo1Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/app/AppStorageDemo1Page' })
+    }) },
+    { info: 'AppStorageDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/app/AppStorageDemo2Page' })
+    }) },
+    { info: 'AppStorageDemo3Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/app/AppStorageDemo3Page' })
+    }) },
+    { info: 'AppStorageDemo4Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/app/AppStorageDemo4Page' })
+    }) },
   ]
 
 

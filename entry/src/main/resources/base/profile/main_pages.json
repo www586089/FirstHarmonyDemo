@@ -122,6 +122,10 @@
     "pages/state/storage/local/LocalStorageDemo2Page",
     "pages/state/storage/local/LocalStorageDemo3Page",
     "pages/state/storage/local/LocalStorageDemo4Page",
-    "pages/state/storage/local/ShareStorageDemoPage"
+    "pages/state/storage/local/ShareStorageDemoPage",
+    "pages/state/storage/app/AppStorageDemo1Page",
+    "pages/state/storage/app/AppStorageDemo2Page",
+    "pages/state/storage/app/AppStorageDemo3Page",
+    "pages/state/storage/app/AppStorageDemo4Page"
   ]
 }
