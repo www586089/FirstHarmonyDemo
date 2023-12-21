@@ -84,6 +84,9 @@ struct StateManagerDemoPage {
     { info: 'AppStorageDemo4Page', action: (() => {
       router.pushUrl({ url: 'pages/state/storage/app/AppStorageDemo4Page' })
     }) },
+    { info: 'PersistStorageDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/persist/PersistStorageDemo2Page' })
+    }) },
   ]
 
 
