@@ -21,14 +21,14 @@ struct RelativeContainerView {
           top: { anchor: '__container__', align: VerticalAlign.Top },
           left: { anchor: '__container__', align: HorizontalAlign.Start }
         }).width('20%').height(100)
-        .id("row1").backgroundColor("#ff0000")
+        .id("row11").backgroundColor("#ff0000")
 
       Row()
       .alignRules({
         top: { anchor: '__container__', align: VerticalAlign.Top },
         right: { anchor: '__container__', align: HorizontalAlign.End }
       }).width('20%').height(100)
-        .id("row2").backgroundColor("#ffcc00")
+        .id("row22").backgroundColor("#ffcc00")
 
       Row()
         .margin({top: 12})

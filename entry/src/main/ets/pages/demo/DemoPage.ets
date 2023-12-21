@@ -45,9 +45,7 @@ struct DemoPage {
 
 @Component
 struct FancyButton {
-  @BuilderParam
   info: string = "";
-  @BuilderParam
   action: (event?: ClickEvent) => void;
 
   @Styles cuteButton() {

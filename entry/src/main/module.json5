@@ -31,6 +31,15 @@
             ]
           }
         ]
+      },
+      {
+        "name": "StorageEntryAbilityDemo",
+        "srcEntry": "./ets/storageentryabilitydemo/StorageEntryAbilityDemo.ts",
+        "description": "$string:StorageEntryAbilityDemo_desc",
+        "icon": "$media:icon",
+        "label": "$string:StorageEntryAbilityDemo_label",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background"
       }
     ],
     "requestPermissions": [

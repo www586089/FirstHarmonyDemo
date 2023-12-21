@@ -6,15 +6,15 @@ struct PropDemo2Page {
   build() {
     Row() {
       Column() {
-        Child({ value: this.arr[0] })
-        Child({ value: this.arr[1] })
-        Child({ value: this.arr[2] })
+        PropDemo2Child({ value: this.arr[0] })
+        PropDemo2Child({ value: this.arr[1] })
+        PropDemo2Child({ value: this.arr[2] })
 
         Divider().height(5)
 
         ForEach(this.arr,
           item => {
-            Child({ value: item })
+            PropDemo2Child({ value: item })
           },
           item => JSON.stringify(item)
         )
@@ -30,7 +30,7 @@ struct PropDemo2Page {
 }
 
 @Component
-struct Child {
+struct PropDemo2Child {
   @Prop value: number;
 
   build() {

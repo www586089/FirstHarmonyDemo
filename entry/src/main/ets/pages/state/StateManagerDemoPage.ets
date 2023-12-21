@@ -59,28 +59,38 @@ struct StateManagerDemoPage {
     { info: '二维数组变化', action: (() => {
       router.pushUrl({ url: 'pages/state/complex/NestObjectDemo2Page' })
     }) },
+    { info: 'LocalStorageDemo1Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo1Page' })
+    }) },
+    { info: 'LocalStorageDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo2Page' })
+    }) },
+    { info: 'LocalStorageDemo3Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo3Page' })
+    }) },
+    { info: 'LocalStorageDemo4Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo4Page' })
+    }) },
   ]
 
 
   build() {
     List() {
-      ForEach(this.itemList, (item) => {
+      ForEach(this.itemList, (item, index) => {
         ListItem() {
           FancyButton({ info: item.info, action: (() => {
             item.action.call()
-          }) })
+          }) }).margin({top: 0 == index ? 48 : 0})
         }
       }, item => item.info)
     }.alignListItem(ListItemAlign.Center)
-    .height('100%').width('100%').margin({top: 48})
+    .height('100%').width('100%')
   }
 }
 
 @Component
 struct FancyButton {
-  @BuilderParam
   info: string = "";
-  @BuilderParam
   action: (event?: ClickEvent) => void;
 
   @Styles cuteButton() {

@@ -11,6 +11,14 @@
     {
       "name": "EntryAbility_label",
       "value": "鸿蒙Demo"
+    },
+    {
+      "name": "StorageEntryAbilityDemo_desc",
+      "value": "description"
+    },
+    {
+      "name": "StorageEntryAbilityDemo_label",
+      "value": "label"
     }
   ]
 }
