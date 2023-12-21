@@ -60,16 +60,16 @@ struct StateManagerDemoPage {
       router.pushUrl({ url: 'pages/state/complex/NestObjectDemo2Page' })
     }) },
     { info: 'LocalStorageDemo1Page', action: (() => {
-      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo1Page' })
+      router.pushUrl({ url: 'pages/state/storage/local/LocalStorageDemo1Page' })
     }) },
     { info: 'LocalStorageDemo2Page', action: (() => {
-      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo2Page' })
+      router.pushUrl({ url: 'pages/state/storage/local/LocalStorageDemo2Page' })
     }) },
     { info: 'LocalStorageDemo3Page', action: (() => {
-      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo3Page' })
+      router.pushUrl({ url: 'pages/state/storage/local/LocalStorageDemo3Page' })
     }) },
     { info: 'LocalStorageDemo4Page', action: (() => {
-      router.pushUrl({ url: 'pages/state/storage/LocalStorageDemo4Page' })
+      router.pushUrl({ url: 'pages/state/storage/local/LocalStorageDemo4Page' })
     }) },
   ]
 

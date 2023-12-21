@@ -118,10 +118,10 @@
     "pages/state/complex/NestObjectDemoPage",
     "pages/state/complex/ObjectArrayDemoPage",
     "pages/state/complex/NestObjectDemo2Page",
-    "pages/state/storage/LocalStorageDemo1Page",
-    "pages/state/storage/LocalStorageDemo2Page",
-    "pages/state/storage/LocalStorageDemo3Page",
-    "pages/state/storage/LocalStorageDemo4Page",
-    "pages/state/storage/ShareStorageDemoPage"
+    "pages/state/storage/local/LocalStorageDemo1Page",
+    "pages/state/storage/local/LocalStorageDemo2Page",
+    "pages/state/storage/local/LocalStorageDemo3Page",
+    "pages/state/storage/local/LocalStorageDemo4Page",
+    "pages/state/storage/local/ShareStorageDemoPage"
   ]
 }
