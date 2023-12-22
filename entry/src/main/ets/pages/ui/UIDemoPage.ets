@@ -59,6 +59,9 @@ struct UIDemoPage {
     { info: 'PropertyAnimDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/PropertyAnimDemoPage' })
     }) },
+    { info: '条件渲染', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/RenderTestDemoPage' })
+    }) },
   ]
 
   build() {
