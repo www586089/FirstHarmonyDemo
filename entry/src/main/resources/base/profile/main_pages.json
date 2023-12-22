@@ -130,6 +130,11 @@
     "pages/state/storage/persist/PersistStorageDemo2Page",
     "pages/state/storage/other/OtherStateChangeDemo1Page",
     "pages/state/storage/other/OtherStateChangeDemo2Page",
-    "pages/state/storage/other/RefreshDemo1Page"
+    "pages/state/storage/other/RefreshDemo1Page",
+    "pages/ui/render/RenderTestDemoPage",
+    "pages/ui/render/RenderTestDemo1Page",
+    "pages/ui/render/RenderTestDemo2Page",
+    "pages/ui/render/RenderTestDemo3Page",
+    "pages/ui/render/RenderTestDemo4Page"
   ]
 }
