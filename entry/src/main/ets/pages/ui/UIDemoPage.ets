@@ -62,6 +62,9 @@ struct UIDemoPage {
     { info: '条件渲染', action: (() => {
       router.pushUrl({ url: 'pages/ui/render/RenderTestDemoPage' })
     }) },
+    { info: 'Foreach渲染', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/foreach/ForeachRenderDemoPage' })
+    }) },
   ]
 
   build() {

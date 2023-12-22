@@ -135,6 +135,15 @@
     "pages/ui/render/RenderTestDemo1Page",
     "pages/ui/render/RenderTestDemo2Page",
     "pages/ui/render/RenderTestDemo3Page",
-    "pages/ui/render/RenderTestDemo4Page"
+    "pages/ui/render/RenderTestDemo4Page",
+    "pages/ui/render/foreach/ForeachRenderDemoPage",
+    "pages/ui/render/foreach/ForeachRenderDemo1Page",
+    "pages/ui/render/foreach/ForeachRenderDemo2Page",
+    "pages/ui/render/foreach/ForeachRenderDemo3Page",
+    "pages/ui/render/foreach/ForeachRenderDemo4Page",
+    "pages/ui/render/foreach/ForeachRenderDemo5Page",
+    "pages/ui/render/foreach/ForeachRenderDemo6Page",
+    "pages/ui/render/foreach/ForeachRenderDemo7Page",
+    "pages/ui/render/foreach/ForeachRenderDemo8Page"
   ]
 }
