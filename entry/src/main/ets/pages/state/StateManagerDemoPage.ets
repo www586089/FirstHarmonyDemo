@@ -87,6 +87,15 @@ struct StateManagerDemoPage {
     { info: 'PersistStorageDemo2Page', action: (() => {
       router.pushUrl({ url: 'pages/state/storage/persist/PersistStorageDemo2Page' })
     }) },
+    { info: 'OtherStateChangeDemo1Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/other/OtherStateChangeDemo1Page' })
+    }) },
+    { info: 'OtherStateChangeDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/other/OtherStateChangeDemo2Page' })
+    }) },
+    { info: 'RefreshDemo1Page', action: (() => {
+      router.pushUrl({ url: 'pages/state/storage/other/RefreshDemo1Page' })
+    }) },
   ]
 
 

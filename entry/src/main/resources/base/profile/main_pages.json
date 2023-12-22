@@ -127,6 +127,9 @@
     "pages/state/storage/app/AppStorageDemo2Page",
     "pages/state/storage/app/AppStorageDemo3Page",
     "pages/state/storage/app/AppStorageDemo4Page",
-    "pages/state/storage/persist/PersistStorageDemo2Page"
+    "pages/state/storage/persist/PersistStorageDemo2Page",
+    "pages/state/storage/other/OtherStateChangeDemo1Page",
+    "pages/state/storage/other/OtherStateChangeDemo2Page",
+    "pages/state/storage/other/RefreshDemo1Page"
   ]
 }
