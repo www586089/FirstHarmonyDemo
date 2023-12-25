@@ -17,21 +17,32 @@ struct LazyRenderDemo4Page {
     List({ space: 3 }) {
       LazyForEach(this.data, (item: StringData, index: number) => {
         ListItem() {
-          Column() {
-            Text(item.message).fontSize(50)
-              .onAppear(() => {
-                console.info("appear:" + item.message)
-              })
-            Image(item.imgSrc)
-              .width(500)
-              .height(200)
-          }.margin({ left: 10, right: 10 })
+          LazyDemo4ChildComponent({data: item})
         }
         .onClick(() => {
           item.message += '00';
           this.data.reloadData();
         })
-      }, (item: StringData, index: number) => JSON.stringify(item))
+      }, (item: StringData, index: number) => {
+        //key不变，此时只更新相关item的数据
+        return index.toString()
+      })
     }.cachedCount(5).width('100%').height('100%')
+  }
+}
+
+@Component
+struct LazyDemo4ChildComponent {
+  @ObjectLink data: StringData
+  build() {
+    Column() {
+      Text(this.data.message).fontSize(50)
+        .onAppear(() => {
+          console.info("appear:" + this.data.message)
+        })
+      Image(this.data.imgSrc)
+        .width(500)
+        .height(200)
+    }.margin({ left: 10, right: 10 })
   }
 }
