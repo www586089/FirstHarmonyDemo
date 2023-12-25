@@ -47,6 +47,9 @@ struct PropertyAnimDemoPage {
     { info: 'WidgetTransitionExamplePage', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/scene/WidgetTransitionExamplePage' })
     }) },
+    { info: 'SharedTransitionExample', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/scene/SharedTransitionExample' })
+    }) },
   ]
 
 

@@ -157,6 +157,8 @@
     "pages/ui/anim/scene/AExample",
     "pages/ui/anim/scene/PageTransitionExample",
     "pages/ui/anim/scene/PageTransitionExapleTarget",
-    "pages/ui/anim/scene/WidgetTransitionExamplePage"
+    "pages/ui/anim/scene/WidgetTransitionExamplePage",
+    "pages/ui/anim/scene/SharedTransitionExample",
+    "pages/ui/anim/scene/SharedTransitionTargetExamplePage"
   ]
 }
