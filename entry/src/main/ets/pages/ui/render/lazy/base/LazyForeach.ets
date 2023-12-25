@@ -1,4 +1,6 @@
 // Basic implementation of IDataSource to handle data listener
+import { StringData } from './LazyData';
+
 export class BasicDataSource<T> implements IDataSource {
   private listeners: DataChangeListener[] = [];
   private originDataArray: T[] = [];
@@ -101,4 +103,8 @@ export class SimpleStringDataSource extends MyDataSource<string> {
       return item + '0';
     })
   }
+}
+
+export class ComplexDataSource extends MyDataSource<StringData> {
+
 }
