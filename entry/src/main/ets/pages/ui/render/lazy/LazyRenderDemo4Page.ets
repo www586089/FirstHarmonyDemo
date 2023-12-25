@@ -3,9 +3,9 @@ import { ComplexDataSource } from './base/LazyForeach';
 
 @Entry
 @Component
-struct LazyRenderDemo2Page {
+struct LazyRenderDemo4Page {
   private moved: number[] = [];
-  @State data: ComplexDataSource = new ComplexDataSource();
+  private data: ComplexDataSource = new ComplexDataSource();
 
   aboutToAppear() {
     for (let i = 0; i <= 20; i++) {
@@ -17,25 +17,21 @@ struct LazyRenderDemo2Page {
     List({ space: 3 }) {
       LazyForEach(this.data, (item: StringData, index: number) => {
         ListItem() {
-          LazyDemo2ChildComponent({data: item})
+          Column() {
+            Text(item.message).fontSize(50)
+              .onAppear(() => {
+                console.info("appear:" + item.message)
+              })
+            Image(item.imgSrc)
+              .width(500)
+              .height(200)
+          }.margin({ left: 10, right: 10 })
         }
         .onClick(() => {
-          item.message += '0';
+          item.message += '00';
+          this.data.reloadData();
         })
-      }, (item: StringData, index: number) => index.toString())
+      }, (item: StringData, index: number) => JSON.stringify(item))
     }.cachedCount(5).width('100%').height('100%')
-  }
-}
-
-@Component
-struct LazyDemo2ChildComponent {
-  @ObjectLink data: StringData
-  build() {
-    Row() {
-      Text(this.data.message).fontSize(50)
-        .onAppear(() => {
-          console.info("appear:" + this.data.message)
-        })
-    }.margin({ left: 10, right: 10 })
   }
 }
