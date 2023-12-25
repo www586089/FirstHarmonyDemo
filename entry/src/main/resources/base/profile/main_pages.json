@@ -151,6 +151,7 @@
     "pages/ui/render/lazy/LazyForEachDemo3Page",
     "pages/ui/render/lazy/LazyRenderDemo4Page",
     "pages/ui/render/lazy/LazyRenderDemo5Page",
-    "pages/ui/anim/view/ViewAnimation1Page"
+    "pages/ui/anim/view/ViewAnimation1Page",
+    "pages/ui/anim/property/AttrAnimationExample"
   ]
 }

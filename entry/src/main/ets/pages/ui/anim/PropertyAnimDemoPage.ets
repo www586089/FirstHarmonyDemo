@@ -35,6 +35,9 @@ struct PropertyAnimDemoPage {
     { info: 'ViewAnimation1Page', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/view/ViewAnimation1Page' })
     }) },
+    { info: 'AttrAnimationExample', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/property/AttrAnimationExample' })
+    }) },
   ]
 
 
