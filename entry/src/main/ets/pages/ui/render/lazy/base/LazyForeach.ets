@@ -58,7 +58,7 @@ export class BasicDataSource implements IDataSource {
 }
 
 export class MyDataSource extends BasicDataSource {
-  private dataArray: string[] = [];
+  public dataArray: string[] = [];
 
   public totalCount(): number {
     return this.dataArray.length;
@@ -76,5 +76,25 @@ export class MyDataSource extends BasicDataSource {
   public pushData(data: string): void {
     this.dataArray.push(data);
     this.notifyDataAdd(this.dataArray.length - 1);
+  }
+
+  public deleteData(index: number): void {
+    this.dataArray.splice(index, 1);
+    this.notifyDataDelete(index);
+  }
+
+  public changeData(index: number, data: string): void {
+    this.dataArray.splice(index, 1, data);
+    this.notifyDataChange(index);
+  }
+
+  public modifyAllData(): void {
+    this.dataArray = this.dataArray.map((item: string) => {
+      return item + '0';
+    })
+  }
+
+  public reloadData(): void {
+    this.notifyDataReload();
   }
 }
