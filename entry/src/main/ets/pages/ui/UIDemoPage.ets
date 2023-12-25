@@ -65,6 +65,9 @@ struct UIDemoPage {
     { info: 'Foreach渲染', action: (() => {
       router.pushUrl({ url: 'pages/ui/render/foreach/ForeachRenderDemoPage' })
     }) },
+    { info: 'LazyForeach', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/lazy/LazyRenderDemoPage' })
+    }) },
   ]
 
   build() {

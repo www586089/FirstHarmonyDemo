@@ -1,0 +1,79 @@
+import router from '@ohos.router'
+
+
+@Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
+  .fontWeight(fontWeight)
+  .fontSize(fontSize)
+}
+
+/**
+ * 条件渲染
+ */
+@Entry
+@Component
+struct LazyRenderDemoPage {
+
+  @Styles cuteButton() {
+    .margin({
+      top: 20
+    })
+    .backgroundColor("#0D9FFB")
+    .width('40%')
+    .height('5%')
+  }
+
+  itemList: object[] = [
+    { info: 'LazyRenderDemo1Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/lazy/LazyRenderDemo1Page' })
+    }) },
+    { info: 'RenderTestDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/RenderTestDemo2Page' })
+    }) },
+    { info: 'RenderTestDemo3Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/RenderTestDemo3Page' })
+    }) },
+    { info: 'RenderTestDemo4Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/RenderTestDemo4Page' })
+    }) },
+  ]
+
+
+  build() {
+    List() {
+      ForEach(this.itemList, (item) => {
+        ListItem() {
+          FancyButton({ info: item.info, action: (() => {
+            item.action.call()
+          }) })
+        }
+      }, item => item.info)
+    }.alignListItem(ListItemAlign.Center)
+    .height('100%').width('100%')
+  }
+}
+
+@Component
+struct FancyButton {
+  info: string = "";
+  action: (event?: ClickEvent) => void;
+
+  @Styles cuteButton() {
+    .margin({
+      top: 20
+    })
+    .backgroundColor("#0D9FFB")
+    .width('45%')
+    .height('5%')
+  }
+
+  build() {
+
+    Button() {
+      Text(this.info).fancy(FontWeight.Normal, 20)
+    }.cuteButton().type(ButtonType.Capsule).onClick(() => {
+      {
+        this.action.call(this)
+      }
+    })
+  }
+}
