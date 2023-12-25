@@ -26,11 +26,11 @@ struct LazyRenderDemoPage {
     { info: 'LazyRenderDemo1Page', action: (() => {
       router.pushUrl({ url: 'pages/ui/render/lazy/LazyRenderDemo1Page' })
     }) },
-    { info: 'RenderTestDemo2Page', action: (() => {
-      router.pushUrl({ url: 'pages/ui/render/RenderTestDemo2Page' })
+    { info: 'LazyRenderDemo2Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/lazy/LazyRenderDemo2Page' })
     }) },
-    { info: 'RenderTestDemo3Page', action: (() => {
-      router.pushUrl({ url: 'pages/ui/render/RenderTestDemo3Page' })
+    { info: 'LazyForEachDemo3Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/lazy/LazyForEachDemo3Page' })
     }) },
     { info: 'RenderTestDemo4Page', action: (() => {
       router.pushUrl({ url: 'pages/ui/render/RenderTestDemo4Page' })

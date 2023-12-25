@@ -147,6 +147,7 @@
     "pages/ui/render/foreach/ForeachRenderDemo8Page",
     "pages/ui/render/lazy/LazyRenderDemoPage",
     "pages/ui/render/lazy/LazyRenderDemo1Page",
-    "pages/ui/render/lazy/LazyRenderDemo2Page"
+    "pages/ui/render/lazy/LazyRenderDemo2Page",
+    "pages/ui/render/lazy/LazyForEachDemo3Page"
   ]
 }
