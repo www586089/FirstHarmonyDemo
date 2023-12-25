@@ -32,6 +32,9 @@ struct PropertyAnimDemoPage {
     { info: 'ShareTransitionFirstPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/scene/ShareTransitionFirstPage' })
     }) },
+    { info: 'ViewAnimation1Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/view/ViewAnimation1Page' })
+    }) },
   ]
 
 

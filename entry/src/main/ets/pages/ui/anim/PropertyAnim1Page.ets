@@ -21,7 +21,7 @@ struct PropertyAnim1Page {
             }
             this.flag = !this.flag
           })
-          .fontSize(24)
+          .fontSize(12)
           .fontColor(Color.White)
           .backgroundColor('#67c8ff')
           .margin(30)
