@@ -1,9 +1,9 @@
-import { MyDataSource } from './base/LazyForeach';
+import { SimpleStringDataSource } from './base/LazyForeach';
 
 @Entry
 @Component
 struct LazyRenderDemo1Page {
-  private data: MyDataSource = new MyDataSource();
+  private data: SimpleStringDataSource = new SimpleStringDataSource();
   private isChange: boolean = true;
 
   aboutToAppear() {

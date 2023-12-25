@@ -1,13 +1,13 @@
 // Basic implementation of IDataSource to handle data listener
-export class BasicDataSource implements IDataSource {
+export class BasicDataSource<T> implements IDataSource {
   private listeners: DataChangeListener[] = [];
-  private originDataArray: string[] = [];
+  private originDataArray: T[] = [];
 
   public totalCount(): number {
     return 0;
   }
 
-  public getData(index: number): string {
+  public getData(index: number): T {
     return this.originDataArray[index];
   }
 
@@ -57,23 +57,23 @@ export class BasicDataSource implements IDataSource {
   }
 }
 
-export class MyDataSource extends BasicDataSource {
-  public dataArray: string[] = [];
+export class MyDataSource<T> extends BasicDataSource<T> {
+  public dataArray: T[] = [];
 
   public totalCount(): number {
     return this.dataArray.length;
   }
 
-  public getData(index: number): string {
+  public getData(index: number): T {
     return this.dataArray[index];
   }
 
-  public addData(index: number, data: string): void {
+  public addData(index: number, data: T): void {
     this.dataArray.splice(index, 0, data);
     this.notifyDataAdd(index);
   }
 
-  public pushData(data: string): void {
+  public pushData(data: T): void {
     this.dataArray.push(data);
     this.notifyDataAdd(this.dataArray.length - 1);
   }
@@ -83,18 +83,22 @@ export class MyDataSource extends BasicDataSource {
     this.notifyDataDelete(index);
   }
 
-  public changeData(index: number, data: string): void {
+  public changeData(index: number, data: T): void {
     this.dataArray.splice(index, 1, data);
     this.notifyDataChange(index);
   }
 
+
+
+  public reloadData(): void {
+    this.notifyDataReload();
+  }
+}
+
+export class SimpleStringDataSource extends MyDataSource<string> {
   public modifyAllData(): void {
     this.dataArray = this.dataArray.map((item: string) => {
       return item + '0';
     })
-  }
-
-  public reloadData(): void {
-    this.notifyDataReload();
   }
 }
