@@ -38,6 +38,12 @@ struct PropertyAnimDemoPage {
     { info: 'AttrAnimationExample', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/property/AttrAnimationExample' })
     }) },
+    { info: 'PageTransitionExample1', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/scene/PageTransitionExample1' })
+    }) },
+    { info: 'PageTransitionExample', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/scene/PageTransitionExample' })
+    }) },
   ]
 
 
