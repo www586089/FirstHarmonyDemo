@@ -35,6 +35,9 @@ struct LazyRenderDemoPage {
     { info: 'LazyRenderDemo4Page', action: (() => {
       router.pushUrl({ url: 'pages/ui/render/lazy/LazyRenderDemo4Page' })
     }) },
+    { info: 'LazyRenderDemo5Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/render/lazy/LazyRenderDemo5Page' })
+    }) },
   ]
 
 

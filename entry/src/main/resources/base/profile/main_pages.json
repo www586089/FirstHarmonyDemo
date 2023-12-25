@@ -149,6 +149,7 @@
     "pages/ui/render/lazy/LazyRenderDemo1Page",
     "pages/ui/render/lazy/LazyRenderDemo2Page",
     "pages/ui/render/lazy/LazyForEachDemo3Page",
-    "pages/ui/render/lazy/LazyRenderDemo4Page"
+    "pages/ui/render/lazy/LazyRenderDemo4Page",
+    "pages/ui/render/lazy/LazyRenderDemo5Page"
   ]
 }
