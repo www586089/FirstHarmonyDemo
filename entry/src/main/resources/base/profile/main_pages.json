@@ -164,6 +164,12 @@
     "pages/ui/anim/layout/LayoutAnimDemoPage",
     "pages/ui/anim/layout/LayoutUpdateAnimPage",
     "pages/ui/anim/layout/LayoutUpdateAnim2Page",
-    "pages/ui/anim/layout/LayoutUpdateAnim3Page"
+    "pages/ui/anim/layout/LayoutUpdateAnim3Page",
+    "pages/ui/anim/scene/IfElseTransition",
+    "pages/ui/anim/scene/ForeachTransitionPage",
+    "pages/ui/anim/property/SpringTest",
+    "pages/ui/anim/property/SpringMotionTest",
+    "pages/ui/anim/scene/ShareTransitionSrc",
+    "pages/ui/anim/scene/ShareTransitionDest"
   ]
 }
