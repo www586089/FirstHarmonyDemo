@@ -68,6 +68,9 @@ struct UIDemoPage {
     { info: 'LazyForeach', action: (() => {
       router.pushUrl({ url: 'pages/ui/render/lazy/LazyRenderDemoPage' })
     }) },
+    { info: 'TouchEventDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/event/TouchEventDemoPage' })
+    }) },
   ]
 
   build() {
