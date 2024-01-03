@@ -56,6 +56,12 @@ struct PropertyAnimDemoPage {
     { info: 'LayoutAnimDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/layout/LayoutAnimDemoPage' })
     }) },
+    { info: 'PageTransitionSrc1', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/scene/PageTransitionSrc1' })
+    }) },
+    { info: 'PageTransitionSrc2', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/scene/PageTransitionSrc2' })
+    }) },
   ]
 
 

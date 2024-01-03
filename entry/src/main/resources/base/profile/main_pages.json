@@ -170,6 +170,10 @@
     "pages/ui/anim/property/SpringTest",
     "pages/ui/anim/property/SpringMotionTest",
     "pages/ui/anim/scene/ShareTransitionSrc",
-    "pages/ui/anim/scene/ShareTransitionDest"
+    "pages/ui/anim/scene/ShareTransitionDest",
+    "pages/ui/anim/scene/PageTransitionSrc1",
+    "pages/ui/anim/scene/PageTransitionDst1",
+    "pages/ui/anim/scene/PageTransitionSrc2",
+    "pages/ui/anim/scene/PageTransitionDst2"
   ]
 }
