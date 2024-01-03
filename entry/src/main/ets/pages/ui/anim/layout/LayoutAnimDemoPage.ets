@@ -8,7 +8,7 @@ import router from '@ohos.router'
 
 @Entry
 @Component
-struct PropertyAnimDemoPage {
+struct LayoutAnimDemoPage {
 
   @Styles cuteButton() {
     .margin({
@@ -20,14 +20,14 @@ struct PropertyAnimDemoPage {
   }
 
   itemList: object[] = [
-    { info: 'PropertyAnim1Page', action: (() => {
-      router.pushUrl({ url: 'pages/ui/anim/PropertyAnim1Page' })
+    { info: 'LayoutUpdateAnimPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/layout/LayoutUpdateAnimPage' })
     }) },
-    { info: 'TransitionScenePage', action: (() => {
-      router.pushUrl({ url: 'pages/ui/anim/scene/TransitionScenePage' })
+    { info: 'LayoutUpdateAnim2Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/layout/LayoutUpdateAnim2Page' })
     }) },
-    { info: 'TransitionScene2Page', action: (() => {
-      router.pushUrl({ url: 'pages/ui/anim/scene/TransitionScene2Page' })
+    { info: 'LayoutUpdateAnim3Page', action: (() => {
+      router.pushUrl({ url: 'pages/ui/anim/layout/LayoutUpdateAnim3Page' })
     }) },
     { info: 'ShareTransitionFirstPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/scene/ShareTransitionFirstPage' })
@@ -52,9 +52,6 @@ struct PropertyAnimDemoPage {
     }) },
     { info: 'MotionPathExample', action: (() => {
       router.pushUrl({ url: 'pages/ui/anim/scene/MotionPathExample' })
-    }) },
-    { info: 'LayoutAnimDemoPage', action: (() => {
-      router.pushUrl({ url: 'pages/ui/anim/layout/LayoutAnimDemoPage' })
     }) },
   ]
 

@@ -160,6 +160,10 @@
     "pages/ui/anim/scene/WidgetTransitionExamplePage",
     "pages/ui/anim/scene/SharedTransitionExample",
     "pages/ui/anim/scene/SharedTransitionTargetExamplePage",
-    "pages/ui/anim/scene/MotionPathExample"
+    "pages/ui/anim/scene/MotionPathExample",
+    "pages/ui/anim/layout/LayoutAnimDemoPage",
+    "pages/ui/anim/layout/LayoutUpdateAnimPage",
+    "pages/ui/anim/layout/LayoutUpdateAnim2Page",
+    "pages/ui/anim/layout/LayoutUpdateAnim3Page"
   ]
 }
