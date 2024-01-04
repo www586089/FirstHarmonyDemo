@@ -177,6 +177,15 @@
     "pages/ui/anim/scene/PageTransitionDst2",
     "pages/ui/event/TouchEventDemoPage",
     "pages/ui/event/DragOutTestPage",
-    "pages/ui/event/DragInTestPage"
+    "pages/ui/event/DragInTestPage",
+    "pages/ui/widget/ImageBase64TestPage",
+    "pages/ui/widget/ShowNetworkImagePage",
+    "pages/ui/widget/SVGImageTestPage",
+    "pages/ui/widget/ImageInterpolationPage",
+    "pages/ui/widget/ImageRepeatTestPage",
+    "pages/ui/widget/RenderModePage",
+    "pages/ui/widget/ImageSourceSizePage",
+    "pages/ui/widget/ImageColorFilterPage",
+    "pages/ui/widget/ImageLoadEventPage"
   ]
 }

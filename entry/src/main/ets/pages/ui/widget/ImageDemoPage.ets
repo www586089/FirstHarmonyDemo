@@ -26,6 +26,36 @@ struct ImageDemoPage {
     { info: 'ImageFitPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/widget/ImageFitPage' })
     }) },
+    { info: 'ImageBase64TestPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageBase64TestPage' })
+    }) },
+    { info: 'ShowNetworkImagePage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ShowNetworkImagePage' })
+    }) },
+    { info: 'SVGImageTestPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/SVGImageTestPage' })
+    }) },
+    { info: 'ImageInterpolationPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageInterpolationPage' })
+    }) },
+    { info: 'ImageRepeatTestPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageRepeatTestPage' })
+    }) },
+    { info: 'ImageSourceSizePage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageSourceSizePage' })
+    }) },
+    { info: 'ImageLoadEventPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageLoadEventPage' })
+    }) },
+    { info: 'ImageInterpolationPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageInterpolationPage' })
+    }) },
+    { info: 'RenderModePage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/RenderModePage' })
+    }) },
+    { info: 'ImageColorFilterPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/widget/ImageColorFilterPage' })
+    }) },
   ]
 
 
