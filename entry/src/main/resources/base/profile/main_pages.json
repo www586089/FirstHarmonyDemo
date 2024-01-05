@@ -186,6 +186,7 @@
     "pages/ui/widget/RenderModePage",
     "pages/ui/widget/ImageSourceSizePage",
     "pages/ui/widget/ImageColorFilterPage",
-    "pages/ui/widget/ImageLoadEventPage"
+    "pages/ui/widget/ImageLoadEventPage",
+    "pages/ui/notification/NotificationTestPage"
   ]
 }

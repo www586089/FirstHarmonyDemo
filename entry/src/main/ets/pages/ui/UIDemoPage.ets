@@ -71,6 +71,9 @@ struct UIDemoPage {
     { info: 'TouchEventDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/event/TouchEventDemoPage' })
     }) },
+    { info: 'NotificationTestPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/notification/NotificationTestPage' })
+    }) },
   ]
 
   build() {
