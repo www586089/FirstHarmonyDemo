@@ -1,65 +1,47 @@
+import { DiscoveryPage } from './DiscoveryPage';
+import { HomeView } from './HomeView';
+import { MinePage } from './MinePage';
+import { RecommendContent } from './RecommendContent';
+
 @Entry
 @Component
 struct NestTabPage {
 
-  @Builder
-  homeView() {
-    Column(){
-      Tabs(){
-        TabContent() {
-          Text('关注的内容').fontSize(30)
-        }
-        .tabBar('关注')
+  tabsArray:string[] = ['首页', '推荐', '发现', '我的']
+  @State curIndex: number = 0;
 
-        TabContent() {
-          Text('游戏的内容').fontSize(30)
-        }
-        .tabBar('游戏')
-        TabContent() {
-          Text('游戏的内容').fontSize(30)
-        }
-        .tabBar('视频')
-        TabContent() {
-          Text('游戏的内容').fontSize(30)
-        }
-        .tabBar('数码')
-        TabContent() {
-          Text('科技的内容').fontSize(30)
-        }
-        .tabBar('科技')
-      }
-    }
-    .backgroundColor('#ff08a8f1')
-    .width('100%')
+
+  @Builder
+  tabBarBuilder(index: number) {
+    Text(this.tabsArray[index]).fontSize(24).fontColor(this.curIndex == index ? '#333' : '#666')
   }
 
   build() {
     Row() {
       Column() {
         Tabs({ barPosition: BarPosition.End }) {
-          TabContent(){
-            this.homeView()
-          }
-          .tabBar('首页')
-
-          // 其他TabContent内容：发现、推荐、我的
-
-          TabContent() {
-            Text('推荐的内容').fontSize(30)
-          }.backgroundColor('#1008a8f1')
-          .tabBar('推荐')
-
-          TabContent() {
-            Text('发现的内容').fontSize(30)
-          }.backgroundColor('#3008a8f1')
-          .tabBar('发现')
-
-          TabContent() {
-            Text('我的内容').fontSize(30)
-          }.backgroundColor('#5008a8f1')
-          .tabBar("我的")
+          ForEach(this.tabsArray, (tabInfo, index) => {
+            TabContent() {
+              /**
+               * 注意：这里如果换成curIndex来判断，则会引起不必要的刷新
+               */
+              if (0 == index) {
+                HomeView({mineIndex: 0, curIndex: this.curIndex})
+              } else if (1 == index) {
+                RecommendContent({mineIndex: 1, curIndex: this.curIndex}).backgroundColor('#1008a8f1')
+              } else if (2 == index) {
+                DiscoveryPage({mineIndex: 2, curIndex: this.curIndex}).backgroundColor('#801008a8f1')
+              } else {
+                MinePage({mineIndex: 3, curIndex: this.curIndex}).backgroundColor('#801008a8f1')
+              }
+            }.tabBar(this.tabBarBuilder(index))
+          }, (item) => JSON.stringify(item))
         }
-        .scrollable(false)//todo 为true时外层tab不能滑动到内层tab
+        .onChange((index) => {
+          this.curIndex = index
+        })
+        .scrollable(true)//todo 为true时外层tab不能滑动到内层tab
+
       }
       .width('100%')
     }
