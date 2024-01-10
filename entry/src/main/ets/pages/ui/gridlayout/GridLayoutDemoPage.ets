@@ -35,6 +35,9 @@ struct GridLayoutDemoPage {
     { info: 'GridLayoutPage3', action: (() => {
       router.pushUrl({ url: 'pages/ui/gridlayout/GridLayoutPage3' })
     }) },
+    { info: 'CalendarLayoutPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/gridlayout/CalendarLayoutPage' })
+    }) },
     { info: 'ToDoListPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/list/ToDoListPage' })
     }) },

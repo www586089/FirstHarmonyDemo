@@ -188,6 +188,7 @@
     "pages/ui/widget/ImageColorFilterPage",
     "pages/ui/widget/ImageLoadEventPage",
     "pages/ui/notification/NotificationTestPage",
-    "pages/ui/gridlayout/GridLayoutPage3"
+    "pages/ui/gridlayout/GridLayoutPage3",
+    "pages/ui/gridlayout/CalendarLayoutPage"
   ]
 }

@@ -38,6 +38,9 @@ struct UIDemoPage {
     { info: 'GridDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/grid/GridDemoPage' })
     }) },
+    { info: 'GridLayoutDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/gridlayout/GridLayoutDemoPage' })
+    }) },
     { info: 'SwiperDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/swiper/SwiperDemoPage' })
     }) },
