@@ -187,6 +187,7 @@
     "pages/ui/widget/ImageSourceSizePage",
     "pages/ui/widget/ImageColorFilterPage",
     "pages/ui/widget/ImageLoadEventPage",
-    "pages/ui/notification/NotificationTestPage"
+    "pages/ui/notification/NotificationTestPage",
+    "pages/ui/gridlayout/GridLayoutPage3"
   ]
 }
