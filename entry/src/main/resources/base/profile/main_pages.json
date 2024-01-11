@@ -189,6 +189,10 @@
     "pages/ui/widget/ImageLoadEventPage",
     "pages/ui/notification/NotificationTestPage",
     "pages/ui/gridlayout/GridLayoutPage3",
-    "pages/ui/gridlayout/CalendarLayoutPage"
+    "pages/ui/gridlayout/CalendarLayoutPage",
+    "pages/ui/popup/PopupTipsDemoPage",
+    "pages/ui/popup/TextPopupExamplePage",
+    "pages/ui/popup/PopupWithBtnPage",
+    "pages/ui/popup/CustomPopupPage"
   ]
 }
