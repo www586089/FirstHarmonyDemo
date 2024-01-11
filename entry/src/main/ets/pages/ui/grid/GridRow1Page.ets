@@ -6,6 +6,7 @@ struct GridRow1Page {
 
   build() {
     GridRow({
+      columns: 24, //columns为24，默认为12
       breakpoints: {
         value: ['200vp', '300vp', '400vp', '500vp', '600vp'],
         reference: BreakpointsReference.WindowSize

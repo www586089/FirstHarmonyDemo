@@ -19,7 +19,7 @@ struct GridOffsetPage {
           })
         }
       }
-      .width('80%').borderColor("#67c8ff").borderWidth(1)
+      .width('100%').borderColor("#67c8ff").borderWidth(1)
     }
     .height('100%').alignItems(VerticalAlign.Bottom)
   }

@@ -7,7 +7,7 @@ struct GridRow2Page {
 
 
   build() {
-    GridRow({direction: GridRowDirection.RowReverse}) {
+    GridRow({columns: 4, direction: GridRowDirection.Row}) {
       ForEach(this.bgColors, (item, index) => {
         GridCol() {
           Row() {
