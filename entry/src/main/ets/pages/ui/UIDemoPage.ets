@@ -77,6 +77,12 @@ struct UIDemoPage {
     { info: 'NotificationTestPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/notification/NotificationTestPage' })
     }) },
+    { info: 'PopupTipsDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/popup/PopupTipsDemoPage' })
+    }) },
+    { info: 'MenuDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/menu/MenuDemoPage' })
+    }) },
   ]
 
   build() {

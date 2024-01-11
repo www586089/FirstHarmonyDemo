@@ -193,6 +193,9 @@
     "pages/ui/popup/PopupTipsDemoPage",
     "pages/ui/popup/TextPopupExamplePage",
     "pages/ui/popup/PopupWithBtnPage",
-    "pages/ui/popup/CustomPopupPage"
+    "pages/ui/popup/CustomPopupPage",
+    "pages/ui/menu/MenuDemoPage",
+    "pages/ui/menu/SimpleMenuPage",
+    "pages/ui/menu/CustomMenuPage"
   ]
 }
