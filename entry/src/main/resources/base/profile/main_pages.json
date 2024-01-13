@@ -196,6 +196,7 @@
     "pages/ui/popup/CustomPopupPage",
     "pages/ui/menu/MenuDemoPage",
     "pages/ui/menu/SimpleMenuPage",
-    "pages/ui/menu/CustomMenuPage"
+    "pages/ui/menu/CustomMenuPage",
+    "pages/ui/stack/StackAlignContentPage"
   ]
 }
