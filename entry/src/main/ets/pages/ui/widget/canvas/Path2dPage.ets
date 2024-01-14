@@ -11,7 +11,7 @@ struct Path2dPage {
           .width('100%')
           .height('100%')
           .backgroundColor('#F5DC62')
-          .onReady(() =>{
+          .onReady(() => {
             // 使用Path2D的接口构造一个五边形
             let path = new Path2D();
             path.moveTo(150, 50);

@@ -10,13 +10,13 @@ struct ClearRect {
         .width('100%')
         .height('100%')
         .backgroundColor('#F5DC62')
-        .onReady(() =>{
+        .onReady(() => {
           // 设定填充样式，填充颜色设为蓝色
           this.context.fillStyle = '#0097D4';
           // 以(50, 50)为左上顶点，画一个宽高200的矩形
-          this.context.fillRect(50,50,200,200);
+          this.context.fillRect(50, 50, 200, 200);
           // 以(70, 70)为左上顶点，清除宽150高100的区域
-          this.context.clearRect(70,70,150,100);
+          this.context.clearRect(70, 70, 150, 100);
         })
     }
     .width('100%')
