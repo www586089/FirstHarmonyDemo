@@ -6,7 +6,7 @@ struct ShapeTest1Page {
   build() {
     Scroll(this.scroller) {
       Column({space: 10}) {
-        // 画一个宽高都为150的圆
+        // 画一个宽高都为75的圆
         Text('原始尺寸Circle组件')
         Circle({width: 75, height: 75}).fill('#E87361')
 
@@ -73,19 +73,40 @@ struct ShapeTest1Page {
           .height(100)
           .commands('M150 0 L300 300 L0 300 Z')
           .fill("#E87361")
-
         Path()
           .width(100)
           .height(100)
+          .commands('M0 0 L300 0 L300 300 L0 300 L0 0 H -100 V 300 Q -150 150 -200 300')
+          .fill("#67c8ff")
+        Path()
+          .height(100)
+          .width(100)
+          .backgroundColor('#1067c8ff')
+          .commands('M0 150 C0 0 300 150 300 0')
+          .fill('#8067c8ff')
+
+        Path()
+          .width(200)
+          .height(100)// elliptical Arc(A RX,RY,XROTATION,FLAG1,FLAG2,X,Y)
+          .commands('M 0,150 A 300,150 0 0,1 300,30')
           .fillOpacity(0)
+          .antiAlias(true)
+          .backgroundColor('#1067c8ff')
+
+        Path()
+          .width(200)
+          .height(100)
+          .fillOpacity(0)
+          .backgroundColor('#1067c8ff')
           .commands('M150 0 L300 300 L0 300 Z')
           .stroke(Color.Red)
 
         Shape() {
           Path().width(200).height(60).commands('M0 0 L400 0 L400 150 Z')
+            .backgroundColor('#1067c8ff')
         }
         .viewPort({ x: -80, y: -5, width: 500, height: 300 })
-        .fill(0x317AF7)
+        .fill(0x67c8ff)
         .stroke(Color.Red)
         .strokeWidth(3)
         .strokeLineJoin(LineJoinStyle.Miter)
@@ -94,6 +115,7 @@ struct ShapeTest1Page {
         Path()
           .width(100)
           .height(100)
+          .backgroundColor('#4067c8ff')
           .fillOpacity(0)
           .commands('M150 0 L300 300 L0 300 Z')
           .stroke(Color.Red)
@@ -105,6 +127,7 @@ struct ShapeTest1Page {
           .height(100)
           .fillOpacity(0)
           .stroke(Color.Red)
+          .backgroundColor('#1067c8ff')
           .strokeWidth(8)
           .points([[20, 0], [0, 100], [100, 90]])
             // 设置折线拐角处为圆弧
