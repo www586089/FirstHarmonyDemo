@@ -4,7 +4,7 @@ struct DrawImageExamplePage {
   private settings: RenderingContextSettings = new RenderingContextSettings(true)
   private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
   private offContext: OffscreenCanvasRenderingContext2D = new OffscreenCanvasRenderingContext2D(600, 600, this.settings)
-  private img: ImageBitmap = new ImageBitmap("/resources/base/media/girl1.jpg")
+  private img: ImageBitmap = new ImageBitmap("/common/images/girl1.jpeg")
 
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
@@ -23,7 +23,7 @@ struct DrawImageExamplePage {
           let image = this.offContext.transferToImageBitmap();
           this.context.transferFromImageBitmap(image);
 
-          this.testGradient()
+          // this.testGradient()
         })
     }
     .width('100%')
