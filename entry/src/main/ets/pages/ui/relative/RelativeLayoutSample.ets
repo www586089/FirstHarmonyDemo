@@ -57,7 +57,7 @@ struct RelativeLayoutSample {
       .backgroundColor("#67c8ff")
       .border({ width: 2, color: '#6699FF' })
     }
-    .justifyContent(FlexAlign.Center)
+    .justifyContent(FlexAlign.Start)
     .height('100%').width('100%').margin({ left: 0, right: 0 })
   }
 }
