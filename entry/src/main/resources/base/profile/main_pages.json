@@ -197,6 +197,15 @@
     "pages/ui/menu/MenuDemoPage",
     "pages/ui/menu/SimpleMenuPage",
     "pages/ui/menu/CustomMenuPage",
-    "pages/ui/stack/StackAlignContentPage"
+    "pages/ui/stack/StackAlignContentPage",
+    "pages/ui/c2d/C2dDemoPage",
+    "pages/ui/c2d/FillStyleExample",
+    "pages/ui/c2d/LineWidthExample",
+    "pages/ui/c2d/StrokeStyleExample",
+    "pages/ui/c2d/LineCapExample",
+    "pages/ui/c2d/LineJoinExample",
+    "pages/ui/c2d/MiterLimit",
+    "pages/ui/c2d/Fonts",
+    "pages/ui/c2d/TextAlignExample"
   ]
 }

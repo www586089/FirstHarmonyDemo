@@ -83,6 +83,9 @@ struct UIDemoPage {
     { info: 'MenuDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/ui/menu/MenuDemoPage' })
     }) },
+    { info: 'C2dDemoPage', action: (() => {
+      router.pushUrl({ url: 'pages/ui/c2d/C2dDemoPage' })
+    }) },
   ]
 
   build() {
