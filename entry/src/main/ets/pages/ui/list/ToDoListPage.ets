@@ -10,17 +10,17 @@ struct ToDoListPage {
   build() {
     Stack({alignContent: Alignment.TopEnd}) {
       List({ space: 10 }) {
-        ForEach(this.toDoData, (toDoItem) => {
+        ForEach(this.toDoData, (toDoItem: ToDo) => {
           ListItem() {
           }
-        }, toDoItem => toDoItem.key)
+        }, (toDoItem: ToDo) => toDoItem.key)
       }.width("100%").height("100%")
       Text('+')
         .onClick(() => {
           TextPickerDialog.show({
             range: this.availableThings,
             onAccept: (value: TextPickerResult) => {
-              this.toDoData.push(new ToDo(this.availableThings[value.index])); // 新增列表项数据toDoData
+              this.toDoData.push(new ToDo(this.availableThings[value.index as number])); // 新增列表项数据toDoData
             },
           })
         }).width(56).height(56)

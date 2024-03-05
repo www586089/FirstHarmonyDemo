@@ -3,7 +3,7 @@ import { TopBarItem } from './RecommendContent';
 @Component
 export struct TopBarView {
   @Link index: number;
-  tabArray: Array<TopBarItem>
+  tabArray: Array<TopBarItem> = []
   build() {
     Row({ space: 20 }) {
       ForEach(this.tabArray,
@@ -16,7 +16,7 @@ export struct TopBarView {
             .onClick(() => {
               this.index = item.id;
             })
-        }, item => JSON.stringify(item))
+        }, (item: TopBarItem) => JSON.stringify(item))
     }
     .margin({ left: 12 })
     .width('100%')

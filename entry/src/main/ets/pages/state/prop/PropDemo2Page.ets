@@ -13,10 +13,10 @@ struct PropDemo2Page {
         Divider().height(5)
 
         ForEach(this.arr,
-          item => {
+          (item: number) => {
             PropDemo2Child({ value: item })
           },
-          item => JSON.stringify(item)
+          (item: number) => JSON.stringify(item)
         )
         Text('replace entire arr')
           .fontSize(50)

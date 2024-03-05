@@ -5,41 +5,41 @@ import router from '@ohos.router'
 struct SectorGridPage {
   @State message: string = 'Hello World'
 
-  @State sectorItemArray: object[] = [
+  @State sectorItemArray: Record<string, string|object[]>[] = [
     {
-      title: '热门行业',
-      items: [
-        { itemTitle: '通讯', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯1', totalChange: '1.48%', itemLimit: '南宁百货', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯2', totalChange: '1.48%', itemLimit: '汇通新村', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯3', totalChange: '1.48%', itemLimit: '社会服务', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '建筑材料', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯4', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-      ]
+      'title': '热门行业',
+      'items': [
+        { "itemTitle": '通讯', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯1', "totalChange": '1.48%', "itemLimit": '南宁百货', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯2', "totalChange": '1.48%', "itemLimit": '汇通新村', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯3', "totalChange": '1.48%', "itemLimit": '社会服务', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '建筑材料', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯4', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+      ] as Record<string, string>[]
     },
     {
-      title: '热门地区',
-      items: [
-        { itemTitle: '通讯', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22' },
-        { itemTitle: '通讯1', totalChange: '1.48%', itemLimit: '南宁百货', itemChange: '6.1%', itemAmtChange: '55.22' },
-        { itemTitle: '通讯2', totalChange: '1.48%', itemLimit: '汇通新村', itemChange: '6.1%', itemAmtChange: '55.22' },
-        { itemTitle: '通讯3', totalChange: '1.48%', itemLimit: '社会服务', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '建筑材料', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯4', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-      ]
+      'title': '热门地区',
+      'items': [
+        { "itemTitle": '通讯', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22' },
+        { "itemTitle": '通讯1', "totalChange": '1.48%', "itemLimit": '南宁百货', "itemChange": '6.1%', "itemAmtChange": '55.22' },
+        { "itemTitle": '通讯2', "totalChange": '1.48%', "itemLimit": '汇通新村', "itemChange": '6.1%', "itemAmtChange": '55.22' },
+        { "itemTitle": '通讯3', "totalChange": '1.48%', "itemLimit": '社会服务', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '建筑材料', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯4', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+      ] as Record<string, string>[]
     },
     {
-      title: '热门概念',
-      items: [
-        { itemTitle: '通讯', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯1', totalChange: '1.48%', itemLimit: '南宁百货', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯2', totalChange: '1.48%', itemLimit: '汇通新村', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯3', totalChange: '1.48%', itemLimit: '社会服务', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '建筑材料', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-        { itemTitle: '通讯4', totalChange: '1.48%', itemLimit: '精伦电子', itemChange: '6.1%', itemAmtChange: '55.22'  },
-      ]
+      'title': '热门概念',
+      'items': [
+        { "itemTitle": '通讯', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯1', "totalChange": '1.48%', "itemLimit": '南宁百货', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯2', "totalChange": '1.48%', "itemLimit": '汇通新村', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯3', "totalChange": '1.48%', "itemLimit": '社会服务', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '建筑材料', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+        { "itemTitle": '通讯4', "totalChange": '1.48%', "itemLimit": '精伦电子', "itemChange": '6.1%', "itemAmtChange": '55.22'  },
+      ] as Record<string, string>[]
     },
-  ]
+  ] as Record<string, string|object[]>[]
 
   @Builder itemHead(text: string) {
     RelativeContainer() {
@@ -68,27 +68,27 @@ struct SectorGridPage {
       Column() {
         Text().width('100%').height(580).backgroundColor("8067c8ff")
         List() {
-          ForEach(this.sectorItemArray, (sectorItem, index) => {
-            ListItemGroup({header: this.itemHead(sectorItem.title)}) {
+          ForEach(this.sectorItemArray, (sectorItem: Record<string, string|object[]>, index) => {
+            ListItemGroup({header: this.itemHead(sectorItem.title as string)}) {
               ListItem() {
                 GridRow({columns: 3, gutter: 2}) {
-                  ForEach(sectorItem.items, (item, index) => {
+                  ForEach(sectorItem.items as Record<string, string>[], (item: Record<string, string>, index) => {
                     GridCol() {
                       Column() {
-                        Text(item.itemTitle).fontColor("#000000").fontSize(16).height(22).margin({top: 12})
-                        Text(item.totalChange).fontColor("#E03136").fontSize(20).height(22).margin({top: 1})
-                        Text(item.itemLimit).fontColor("#666666").fontSize(14).height(22).margin({top: 4})
+                        Text(item.itemTitle as string).fontColor("#000000").fontSize(16).height(22).margin({top: 12})
+                        Text(item.totalChange as string).fontColor("#E03136").fontSize(20).height(22).margin({top: 1})
+                        Text(item.itemLimit as string).fontColor("#666666").fontSize(14).height(22).margin({top: 4})
                         Text(`${item.itemAmtChange} ${item.itemChange}`).fontColor("#E03136").fontSize(14).height(20)
                       }.backgroundColor(Color.Pink).width('100%').height('100%').onClick(() => {
                         console.log( `click ===> ${item.itemTitle}`);
                         router.pushUrl({ url: 'pages/list/ToDoListPage' })
                       })
                     }.width('30%').height(116)
-                  }, item => item)
+                  }, (item: Record<string, string>) => JSON.stringify(item))
                 }
               }
             }
-          }, sectorItem => sectorItem.title)
+          }, (sectorItem: Record<string, string|object[]>) => sectorItem.title as string)
         }.width('100%').height(0).layoutWeight(1)
 
       }.backgroundColor(Color.White)

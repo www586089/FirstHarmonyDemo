@@ -5,7 +5,7 @@ export class WindowManager {
   private windowStage?: window.WindowStage;
   private subWindow?: window.Window;
 
-  private static instance: WindowManager = null
+  private static instance: WindowManager
 
   /**
    * Get singleton.

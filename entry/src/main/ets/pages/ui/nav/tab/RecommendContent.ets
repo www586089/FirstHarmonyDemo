@@ -30,7 +30,7 @@ export struct RecommendContent {
             .onClick(() => {
               this.index = item.id;
             })
-        }, item => JSON.stringify(item))
+        }, (item: TopBarItem) => JSON.stringify(item))
     }
     .margin({ left: 12 })
     .width('100%')
@@ -73,9 +73,9 @@ function tabData(): TopBarItem[] {
   const TOP_BAR_DATA = [
     { 'id': 0, 'name': '自选股' },
     { 'id': 1, 'name': '行情' }
-  ]
+  ] as Record<string, string|number>[]
   TOP_BAR_DATA.forEach(item => {
-    tabDataArray.push(new TopBarItem(item.id, item.name));
+    tabDataArray.push(new TopBarItem(item.id as number, item.name as string));
   })
   return tabDataArray;
 }

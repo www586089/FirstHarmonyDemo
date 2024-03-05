@@ -7,7 +7,7 @@ struct GridSpanPage {
   build() {
     Row() {
       GridRow({ columns: 16 }) {
-        ForEach(this.bgColors, (color, index) => {
+        ForEach(this.bgColors, (color: Color, index) => {
           GridCol({ span: 4 }) {
             Row() {
               Text(`${index}`)

@@ -7,7 +7,7 @@ struct ForEachTransitionPage {
   build() {
     Column({ space: 10 }) {
       Column() {
-        ForEach(this.numbers, (item) => {
+        ForEach(this.numbers, (item: string) => {
           // ForEach下的直接组件需配置transition效果
           Text(item)
             .width(240)
@@ -17,7 +17,7 @@ struct ForEachTransitionPage {
             .backgroundColor(Color.Orange)
             .textAlign(TextAlign.Center)
             .transition({ type: TransitionType.All, translate: { x: 200 }, scale: { x: 0, y: 0 } })
-        }, item => item)
+        }, (item: string) => item)
       }
       .margin(10)
       .justifyContent(FlexAlign.Start)

@@ -13,7 +13,7 @@ struct MediaQueryExample {
   listener = mediaquery.matchMediaSync('(orientation: landscape)');
 
   // 当满足媒体查询条件时，触发回调
-  onPortrait(mediaQueryResult) {
+  onPortrait(mediaQueryResult: mediaquery.MediaQueryResult) {
     if (mediaQueryResult.matches) { // 若设备为横屏状态，更改相应的页面布局
       this.color = '#FFD700';
       this.text = 'Landscape';
@@ -25,9 +25,8 @@ struct MediaQueryExample {
 
   aboutToAppear() {
     // 绑定当前应用实例
-    portraitFunc = this.onPortrait.bind(this);
     // 绑定回调函数
-    this.listener.on('change', portraitFunc);
+    this.listener.on('change', (mediaQueryResult:mediaquery.MediaQueryResult) => { this.onPortrait(mediaQueryResult) });
   }
 
   // 改变设备横竖屏状态函数

@@ -12,7 +12,7 @@ struct NavigationExample {
           .backgroundColor('#FFFFFF')
 
         List({ space: 12 }) {
-          ForEach(this.arr, (item) => {
+          ForEach(this.arr, (item: number) => {
             ListItem() {
               NavRouter() {
                 Text("NavRouter" + item)
@@ -29,7 +29,7 @@ struct NavigationExample {
                 .title("NavDestinationTitle" + item)
               }
             }
-          }, item => item)
+          }, (item: number) => `${item}`)
         }
         .width("90%")
         .margin({ top: 12 })

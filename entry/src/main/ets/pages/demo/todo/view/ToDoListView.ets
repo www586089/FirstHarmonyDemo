@@ -31,9 +31,9 @@ export struct ToDoListView {
   build() {
     Column({space: 8}) {
       Text('春晓').fontSize(40).fontColor('#333')
-      ForEach(this.toDoListItem, (item, index) => {
+      ForEach(this.toDoListItem, (item: ToDoItem, index) => {
         this.todoListItem(item)
-      }, item => JSON.stringify(item))
+      }, (item: ToDoItem) => JSON.stringify(item))
     }
     .width('100%')
     .backgroundColor("#8067c8ff")

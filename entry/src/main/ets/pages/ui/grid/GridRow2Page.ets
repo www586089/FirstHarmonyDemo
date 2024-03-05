@@ -8,7 +8,7 @@ struct GridRow2Page {
 
   build() {
     GridRow({columns: 4, direction: GridRowDirection.Row}) {
-      ForEach(this.bgColors, (item, index) => {
+      ForEach(this.bgColors, (item: Color, index) => {
         GridCol() {
           Row() {
             Text(`${index + 1}`)

@@ -14,7 +14,7 @@ class  SectorItemData {
 
 export
 class SectorBean {
-  public items: ArrayList<SectorItemData>
+  public items: ArrayList<SectorItemData> = new ArrayList()
 }
 
 export

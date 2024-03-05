@@ -4,7 +4,7 @@ import image from '@ohos.multimedia.image';
 @Entry
 @Component
 struct ShowNetworkImagePage {
-  @State image: PixelMap = undefined;
+  @State image?: PixelMap = undefined;
 
   aboutToAppear() {
 
@@ -32,14 +32,14 @@ struct ShowNetworkImagePage {
         } else {
           let code = data.responseCode;
           if (http.ResponseCode.OK === data.responseCode) {
-            let res: any = data.result
+            let res: string = data.result as string
             let imageSource = image.createImageSource(res);
-            let options = {
-              alphaType: 0,    // 透明度
+            let options: image.DecodingOptions = {
+              // alphaType: 0,    // 透明度
               editable: false, // 是否可编辑
-              pixelFormat: 3,  // 像素格式
-              scaleMode: 1,    // 缩略值
-              size: { height: 100, width: 100 }
+              // pixelFormat: 3,  // 像素格式
+              // scaleMode: 1,    // 缩略值
+              desiredSize: { height: 100, width: 100 }
             } // 创建图片大小
             imageSource.createPixelMap(options).then((pixelMap) => {
               this.image = pixelMap

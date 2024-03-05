@@ -1,3 +1,4 @@
+
 @Entry
 @Component
 struct GridScrollLayoutPage {
@@ -21,7 +22,7 @@ struct GridScrollLayoutPage {
               .borderRadius(36)
           }
           .width('25%')
-        }, service => service)
+        }, (service: string) => service)
       }
       .rowsTemplate('1fr 1fr') // 只设置rowsTemplate属性，当内容超出Grid区域时，可水平滚动。
       .rowsGap(15)

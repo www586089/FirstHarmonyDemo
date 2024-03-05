@@ -54,17 +54,17 @@ struct HealthyHomePage {
   @Builder
   Foods() {
     Tabs() {
-      ForEach(this.foodTabArray, (item, index) => {
+      ForEach(this.foodTabArray, (item: string, index) => {
         TabContent() {
           Grid() {
-            ForEach(this.foodCurIndex == 0 ? this.foodInfoArray : this.foodInfo2Array, (info, index) => {
+            ForEach(this.foodCurIndex == 0 ? this.foodInfoArray : this.foodInfo2Array, (info: string, index) => {
               GridItem() {
                 this.foodItem(info)
               }.width('100%').height(120).borderRadius(8).backgroundColor("#67c8ff")
-            }, info => info)
+            }, (info: string) => info)
           }.columnsTemplate('1fr 1fr 1fr').rowsGap(6).columnsGap(6).height('100%').margin(6)
         }.tabBar(this.FoodTab(item, index))
-      }, item => item)
+      }, (item: string) => item)
     }.barPosition(BarPosition.Start).onChange((index) => {
       this.foodCurIndex = index
     })

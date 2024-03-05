@@ -1,4 +1,6 @@
-import router from '@ohos.router'
+import router from '@ohos.router';
+import { FunctionCallType } from '../../../utils/Type';
+import base from '@ohos.base';
 
 
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
@@ -19,12 +21,12 @@ struct LLDemoPage {
     .height('5%')
   }
 
-  itemList: object[] = [
+  itemList: FunctionCallType[] = [
     { info: "ColumnPage", action: ((event?: ClickEvent) => {
       console.info(`Succeeded in clicking the 'Next' button.`)
       router.pushUrl({ url: 'pages/ui/linear/ColumnPage' }).then(() => {
         console.info('Succeeded in jumping to the second page.')
-      }).catch((err) => {
+      }).catch((err: base.BusinessError) => {
         console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
       })
     }) },
@@ -63,13 +65,13 @@ struct LLDemoPage {
 
   build() {
     List() {
-      ForEach(this.itemList, (item) => {
+      ForEach(this.itemList, (item: FunctionCallType) => {
         ListItem() {
           FancyButton({ info: item.info, action: (() => {
-            item.action.call()
+            item.action()
           }) })
         }
-      }, item => item.info)
+      }, (item: FunctionCallType) => item.info)
     }.alignListItem(ListItemAlign.Center)
     .height('100%').width('100%')
   }
@@ -78,7 +80,7 @@ struct LLDemoPage {
 @Component
 struct FancyButton {
   info: string = "";
-  action: (event?: ClickEvent) => void;
+  action?: () => void;
 
   @Styles cuteButton() {
     .margin({
@@ -95,7 +97,7 @@ struct FancyButton {
       Text(this.info).fancy(FontWeight.Normal, 20)
     }.cuteButton().type(ButtonType.Capsule).onClick(() => {
       {
-        this.action.call(this)
+        this.action?.()
       }
     })
   }

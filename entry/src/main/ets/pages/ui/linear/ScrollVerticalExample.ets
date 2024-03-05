@@ -7,7 +7,7 @@ struct ScrollVerticalExample {
   build() {
     Scroll(this.scroller) {
       Column() {
-        ForEach(this.arr, (item) => {
+        ForEach(this.arr, (item: number) => {
           Text(item.toString())
             .width('90%')
             .height(150)
@@ -16,7 +16,7 @@ struct ScrollVerticalExample {
             .fontSize(16)
             .textAlign(TextAlign.Center)
             .margin({ top: 10 })
-        }, item => item)
+        }, (item: number) => `${item}`)
       }.width('100%')
     }.align(Alignment.TopStart)
     .height("100%")

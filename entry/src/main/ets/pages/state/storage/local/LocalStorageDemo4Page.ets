@@ -1,4 +1,4 @@
-let storage4 = new LocalStorage({ countStorage: 1 });
+let storage4 = new LocalStorage({ 'countStorage': 1 }  as Record<string, number>);
 
 /**
  * 兄弟节点之间同步状态变量
@@ -45,7 +45,7 @@ struct LocalStorageDemo4Page {
           .width(50).height(60).fontSize(12)
         Text(`countStorage ${this.playCount} incr by 1`)
           .onClick(() => {
-            storage4.set<number>('countStorage', 1 + storage4.get<number>('countStorage'));
+            storage4.set<number>('countStorage', 1 + (storage4.get<number>('countStorage') as number));
           })
           .width(250).height(60).fontSize(12)
       }.width(300).height(60)

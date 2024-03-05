@@ -15,11 +15,11 @@ struct ItemPage {
           .width(100).height(100)
 
         ForEach(this.itemArr,
-          item => {
+          (item: string) => {
             Text(item)
               .width(100).height(100)
           },
-          item => item
+          (item: string) => item
         )
       }
     }.scrollable(ScrollDirection.Horizontal)
@@ -46,7 +46,7 @@ struct NestedObjectDemo2Page {
         (itemArr: StringArray, index: number) => {
           ItemPage({ itemArr: itemArr })
         },
-        itemArr => itemArr[0]
+        (itemArr: string) => itemArr[0]
       )
 
       Divider()

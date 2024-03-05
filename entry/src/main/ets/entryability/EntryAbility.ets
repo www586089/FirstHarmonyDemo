@@ -3,9 +3,10 @@ import hilog from '@ohos.hilog';
 import window from '@ohos.window';
 import { Constant } from '../utils/Constant';
 import { WindowManager } from '../window/WindowManger';
+import { AbilityConstant, Want } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want, launchParam) {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
   }
 
@@ -17,7 +18,7 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage) {
     WindowManager.getInstance().setWindowStage(windowStage)
     // 1.获取应用主窗口。
-    let window: window.Window = null;
+    let window: window.Window;
     windowStage.getMainWindow((err, data) => {
       if (err.code) {
         console.error('Failed to obtain the main window. Cause: ' + JSON.stringify(err));

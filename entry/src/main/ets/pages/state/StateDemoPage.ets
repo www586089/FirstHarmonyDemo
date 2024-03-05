@@ -40,7 +40,7 @@ struct StateDemoPage {
             Text(item.key).width('40%').fontSize(24).backgroundColor(Color.Orange)
             Text(item.value.subtitle).width('40%').fontSize(24).fontColor(Color.Red).backgroundColor(Color.Blue)
           }.backgroundColor('#8067c8ff').transition({ type: TransitionType.All, translate: {x: 200, y: 40} })
-        }, item => JSON.stringify(item))
+        }, (item: Model) => JSON.stringify(item))
 
         Button('ClickMe')
           .backgroundColor('#67c8ff')

@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import { FunctionCallType } from '../../../utils/Type'
 
 
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
@@ -19,7 +20,7 @@ struct GridLayoutDemoPage {
     .height('5%')
   }
 
-  itemList: object[] = [
+  itemList: FunctionCallType[] = [
     { info: 'GridLayoutPage1', action: (() => {
       router.pushUrl({ url: 'pages/ui/gridlayout/GridLayoutPage1' })
     }) },
@@ -46,13 +47,13 @@ struct GridLayoutDemoPage {
 
   build() {
     List() {
-      ForEach(this.itemList, (item) => {
+      ForEach(this.itemList, (item: FunctionCallType) => {
         ListItem() {
           FancyButton({ info: item.info, action: (() => {
-            item.action.call()
+            item.action()
           }) })
         }
-      }, item => item.info)
+      }, (item: FunctionCallType) => item.info)
     }.alignListItem(ListItemAlign.Center)
     .height('100%').width('100%')
   }
@@ -61,9 +62,9 @@ struct GridLayoutDemoPage {
 @Component
 struct FancyButton {
   @BuilderParam
-  info: string = "";
+  info: string;
   @BuilderParam
-  action: (event?: ClickEvent) => void;
+  action?: (event?: ClickEvent) => void;
 
   @Styles cuteButton() {
     .margin({
@@ -80,7 +81,7 @@ struct FancyButton {
       Text(this.info).fancy(FontWeight.Normal, 20)
     }.cuteButton().type(ButtonType.Capsule).onClick(() => {
       {
-        this.action.call(this)
+        this.action?.()
       }
     })
   }

@@ -1,6 +1,6 @@
 {
-  "hvigorVersion": "3.0.2",
+  "hvigorVersion": "file:D:/hpx/devecostudio-windows-4.1.3.600/dependencies/hvigor-4.1.1.tgz",
   "dependencies": {
-    "@ohos/hvigor-ohos-plugin": "3.0.2"
+    "@ohos/hvigor-ohos-plugin": "file:D:/hpx/devecostudio-windows-4.1.3.600/dependencies/hvigor-ohos-plugin-4.1.1.tgz",
   }
 }

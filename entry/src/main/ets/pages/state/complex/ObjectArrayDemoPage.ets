@@ -46,7 +46,7 @@ struct ObjectArrayDemoPage {
         (item: ClassA2) => {
           ViewA2({ label: `#${item.id}`, a: item })
         },
-        (item) => item.id.toString()
+        (item: ClassA2) => item.id.toString()
       )
       // 使用@State装饰的数组的数组项初始化@ObjectLink，其中数组项是被@Observed装饰的ClassA的实例
       ViewA2({ label: `ViewA this.arrA[first]`, a: this.arrA[0] })

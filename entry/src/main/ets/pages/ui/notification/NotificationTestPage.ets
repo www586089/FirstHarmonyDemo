@@ -1,6 +1,8 @@
 import NotificationManager from '@ohos.notificationManager';
 import image from '@ohos.multimedia.image';
-import wantAgent from '@ohos.wantAgent';
+import wantAgent, { WantAgent } from '@ohos.app.ability.wantAgent';
+import { FunctionCallType } from '../../../utils/Type';
+import Base from '@ohos.base';
 
 @Extend(Text)
 function fancy(fontWeight: FontWeight, fontSize: number) {
@@ -23,7 +25,7 @@ struct NotificationTestPage {
 
 
 
-  itemList: object[] = [
+  itemList: FunctionCallType[] = [
     { info: '普通文本类型通知', action: (() => {
       this.normalNotification()
     }) },
@@ -47,20 +49,26 @@ struct NotificationTestPage {
 
   wantAgentInfo() {
     //todo
-    let wantAgentObj = null; // 用于保存创建成功的WantAgent对象，后续使用其完成触发的动作。
+    let wantAgentObj: WantAgent; // 用于保存创建成功的wantAgent对象，后续使用其完成触发的动作。
 
-    // 1. wantAgentInfo
-    let wantAgentInfo = {
+    // 通过WantAgentInfo的operationType设置动作类型
+    // 通过WantAgentInfo的operationType设置动作类型
+    let wantAgentInfo:wantAgent.WantAgentInfo = {
       wants: [
         {
-          action: 'event_name', // 设置事件名。
-          parameters: {},
+          deviceId: '',
+          bundleName: 'com.samples.notification',
+          abilityName: 'SecondAbility',
+          action: '',
+          entities: [],
+          uri: '',
+          parameters: {}
         }
       ],
-      operationType: wantAgent.OperationType.SEND_COMMON_EVENT,
+      operationType: wantAgent.OperationType.START_ABILITY,
       requestCode: 0,
-      wantAgentFlags: [wantAgent.WantAgentFlags.CONSTANT_FLAG],
-    }
+      wantAgentFlags:[wantAgent.WantAgentFlags.CONSTANT_FLAG]
+    };
 
     // 2. 创建WantAgent
     wantAgent.getWantAgent(wantAgentInfo, (err, data) => {
@@ -73,9 +81,9 @@ struct NotificationTestPage {
     });
 
     // 3. 构造NotificationRequest对象
-    let notificationRequest = {
+    let notificationRequest: NotificationManager.NotificationRequest = {
       content: {
-        contentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+        notificationContentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
         normal: {
           title: 'Test_Title',
           text: 'Test_Text',
@@ -84,7 +92,7 @@ struct NotificationTestPage {
       },
       id: 1,
       label: 'TEST',
-      wantAgent: wantAgentObj,
+      // wantAgent: wantAgentObj,//todo test
     }
 
     // 4. 通知发送
@@ -107,30 +115,30 @@ struct NotificationTestPage {
       } else {
         console.error(`Not support progress type notification!!!!`)
       }
-    }).catch((err) => {
+    }).catch((err: Base.BusinessError) => {
       console.error(`[ANS] isSupportTemplate failed, error[${err}]`);
     });
   }
 
   doShowProgressNotification() {
-    let template = {
-      name:'downloadTemplate',
-      data: {
-        title: '标题：',
-        fileName: 'music.mp4',
-        progressValue: 30,
-        progressMaxValue:100,
-      }
-    }
+    // let template: NotificationTemplate =
     //构造NotificationRequest对象
-    let notificationRequest = {
+    let notificationRequest: NotificationManager.NotificationRequest = {
       id: 1,
-      slotType: NotificationManager.SlotType.OTHER_TYPES,
-      template: template,
+      notificationSlotType: NotificationManager.SlotType.OTHER_TYPES,
+      template: {
+        name:'downloadTemplate',
+        data: {
+          title: '标题：',
+          fileName: 'music.mp4',
+          progressValue: 30,
+          progressMaxValue:100,
+        }
+      },
       content: {
-        contentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
+        notificationContentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
         normal: {
-          title: template.data.title + template.data.fileName,
+          title: "template.data.title + template.data.fileName",
           text: "sendTemplate",
           additionalText: "30%"
         }
@@ -140,7 +148,7 @@ struct NotificationTestPage {
     }
     NotificationManager.publish(notificationRequest).then(() => {
       console.info(`[ANS] publish success `);
-    }).catch((err) => {
+    }).catch((err: Base.BusinessError) => {
       console.error(`[ANS] failed to publish, error[${err}]`);
     });
   }
@@ -149,26 +157,26 @@ struct NotificationTestPage {
     // 图片构造
     const color = new ArrayBuffer(60000);
     let bufferArr = new Uint8Array(color);
-    for (var i = 0; i < bufferArr.byteLength; i++) {
+    for (let i = 0; i < bufferArr.byteLength; i++) {
       bufferArr[i++] = 20;
       bufferArr[i++] = 220;
       bufferArr[i++] = 100;
       bufferArr[i] = 60;
     }
-    let opts = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 100, width: 150 } };
+    // let opts = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 100, width: 150 } };
     await image
-      .createPixelMap(color, opts)
+      .createPixelMap(color, { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 100, width: 150 } })
       .then(async (pixelMap) => {
         await pixelMap.getImageInfo().then(imageInfo => {
           console.log("=====size: ====" + JSON.stringify(imageInfo.size));
-        }).catch(err => {
+        }).catch((err: Base.BusinessError) => {
           console.error("Failed to obtain the image pixel map information." + JSON.stringify(err));
           return;
         })
-        let notificationRequest = {
+        let notificationRequest: NotificationManager.NotificationRequest = {
           id: 1,
           content: {
-            contentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_PICTURE,
+            notificationContentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_PICTURE,
             picture: {
               title: 'test_title',
               text: 'test_text',
@@ -187,17 +195,17 @@ struct NotificationTestPage {
           }
           console.info(`[ANS] publish success `);
         });
-      }).catch(err => {
+      }).catch((err: Base.BusinessError) => {
         console.error('create pixelmap failed ==========' + JSON.stringify(err));
         return;
       })
   }
 
   multilineTextNotification() {
-    let notificationRequest = {
+    let notificationRequest: NotificationManager.NotificationRequest = {
       id: 1,
       content: {
-        contentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_MULTILINE, // 多行文本类型通知
+        notificationContentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_MULTILINE, // 多行文本类型通知
         multiLine: {
           title: 'test_title',
           text: 'test_text',
@@ -219,10 +227,10 @@ struct NotificationTestPage {
   }
 
   longTextNotification() {
-    let notificationRequest = {
+    let notificationRequest: NotificationManager.NotificationRequest = {
       id: 1,
       content: {
-        contentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_LONG_TEXT, // 长文本类型通知
+        notificationContentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_LONG_TEXT, // 长文本类型通知
         longText: {
           title: '标题测试',
           text: '标题文本测试',
@@ -245,10 +253,10 @@ struct NotificationTestPage {
   }
 
   normalNotification() {
-    let notificationRequest = {
+    let notificationRequest: NotificationManager.NotificationRequest = {
       id: 1,
       content: {
-        contentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT, // 普通文本类型通知
+        notificationContentType: NotificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT, // 普通文本类型通知
         normal: {
           title: 'test_title',
           text: 'test_text',
@@ -268,13 +276,13 @@ struct NotificationTestPage {
 
   build() {
     List() {
-      ForEach(this.itemList, (item) => {
+      ForEach(this.itemList, (item: FunctionCallType) => {
         ListItem() {
           FancyButton({ info: item.info, action: (() => {
-            item.action.call()
+            item.action()
           }) })
         }
-      }, item => item.info)
+      }, (item: FunctionCallType) => item.info)
     }.alignListItem(ListItemAlign.Center)
     .height('100%').width('100%')
   }
@@ -283,7 +291,7 @@ struct NotificationTestPage {
 @Component
 struct FancyButton {
   info: string = "";
-  action: (event?: ClickEvent) => void;
+  action?: () => void;
 
   @Styles
   cuteButton() {
@@ -301,7 +309,7 @@ struct FancyButton {
       Text(this.info).fancy(FontWeight.Normal, 20)
     }.cuteButton().type(ButtonType.Capsule).onClick(() => {
       {
-        this.action.call(this)
+        this.action?.()
       }
     })
   }

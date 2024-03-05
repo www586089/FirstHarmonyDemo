@@ -27,7 +27,7 @@ export struct VerticalScrollView {
             Text(item.change).fontColor('#E03136').fontSize(15).margin({right: 8})
             Image($r('app.media.icon_button_more')).width(16).height(18)
           }.justifyContent(FlexAlign.End).padding({ left: 16, right: 16 }).height('100%')
-        }, item => JSON.stringify(item))
+        }, (item: SectorItemData) => JSON.stringify(item))
       }
       .loop(true)
       .autoPlay(true)

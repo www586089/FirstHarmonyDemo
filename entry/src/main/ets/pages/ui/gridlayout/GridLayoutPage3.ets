@@ -19,7 +19,7 @@ struct GridLayoutPage3 {
                 .height('100%')
                 .textAlign(TextAlign.Center)
             }
-          }, item => JSON.stringify(item))
+          }, (item: Bean) => JSON.stringify(item))
         }.rowsTemplate('1fr 1fr').columnsTemplate('1fr 1fr').rowsGap(10).columnsGap(10).margin(10)
       }
       .width('100%').height('40%').backgroundColor('#eee')
@@ -29,6 +29,6 @@ struct GridLayoutPage3 {
 }
 
 class Bean {
-  title: string
-  color: ResourceColor
+  title: string = ''
+  color: ResourceColor = Color.White
 }

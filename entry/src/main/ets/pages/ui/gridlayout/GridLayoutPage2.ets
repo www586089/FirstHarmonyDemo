@@ -11,7 +11,7 @@ struct GridLayoutPage2 {
             GridItem() {
               Text(item).gridTextStyle_page2('#67c8ff')
             }
-          }, item => item)
+          }, (item: string) => item)
         }
         .rowsGap(12).columnsGap(8).margin(4).maxCount(3).minCount(3).layoutDirection(GridDirection.Column)
       }

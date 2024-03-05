@@ -10,13 +10,13 @@ struct TransitionScene2Page {
   build() {
     Column({ space: 10 }) {
       Column() {
-        ForEach(this.poem, (item, index) => {
+        ForEach(this.poem, (item: string, index) => {
           Text(item).fetchText()
             .transition({
               type: TransitionType.All,
               translate: { x: 200, y: 100 }
             })
-        }, item => JSON.stringify(item))
+        }, (item: string) => JSON.stringify(item))
       }.fetchColumn()
 
       Button('向头部添加元素').fetchButton(Color.Orange, () => {

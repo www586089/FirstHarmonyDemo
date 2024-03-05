@@ -12,7 +12,7 @@ struct GridRow1Page {
         reference: BreakpointsReference.WindowSize
       }
     }) {
-      ForEach(this.bgColors, (color, index) => {
+      ForEach(this.bgColors, (color: Color, index) => {
         GridCol({
           span: {
             xs: 2, // 在最小宽度类型设备上，栅格子组件占据的栅格容器2列。

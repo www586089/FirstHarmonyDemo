@@ -32,118 +32,128 @@ class Contact {
   }
 }
 
+class ContactItem {
+  title: string
+  contacts: Contact[]
+
+  constructor(title: string, contact: Contact[]) {
+    this.title = title
+    this.contacts = contact
+  }
+}
+
 const alphabets = ['#', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
   'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 @Component
 struct ContactsView {
 
-  contactsGroups: object[] = [
+  contactsGroups = [
     {
-      title: 'A',
-      contacts: [
+      'title': 'A',
+      'contacts': [
         new Contact('艾佳A', $r("app.media.logo_quick_contacts")),
         new Contact('安安A', $r("app.media.logo_quick_contacts")),
         new Contact('Angela', $r("app.media.logo_quick_contacts")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'B',
-      contacts: [
+      'title': 'B',
+      'contacts': [
         new Contact('白叶B', $r("app.media.logo_quick_contacts_dialer")),
         new Contact('伯明B', $r("app.media.logo_quick_contacts_dialer")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'C',
-      contacts: [
+      'title': 'C',
+      'contacts': [
         new Contact('艾佳C', $r("app.media.logo_quick_contacts")),
         new Contact('安安C', $r("app.media.logo_quick_contacts")),
         new Contact('Angela', $r("app.media.logo_quick_contacts")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'D',
-      contacts: [
+      'title': 'D',
+      'contacts': [
         new Contact('白叶D', $r("app.media.logo_quick_contacts_dialer")),
         new Contact('伯明D', $r("app.media.logo_quick_contacts_dialer")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'E',
-      contacts: [
+      'title': 'E',
+      'contacts': [
         new Contact('艾佳E', $r("app.media.logo_quick_contacts")),
         new Contact('安安E', $r("app.media.logo_quick_contacts")),
         new Contact('Angela', $r("app.media.logo_quick_contacts")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'F',
-      contacts: [
+      'title': 'F',
+      'contacts': [
         new Contact('白叶F', $r("app.media.logo_quick_contacts_dialer")),
         new Contact('伯明F', $r("app.media.logo_quick_contacts_dialer")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'G',
-      contacts: [
+      'title': 'G',
+      'contacts': [
         new Contact('艾佳G', $r("app.media.logo_quick_contacts")),
         new Contact('安安G', $r("app.media.logo_quick_contacts")),
         new Contact('Angela', $r("app.media.logo_quick_contacts")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'H',
-      contacts: [
+      'title': 'H',
+      'contacts': [
         new Contact('白叶H', $r("app.media.logo_quick_contacts_dialer")),
         new Contact('伯明H', $r("app.media.logo_quick_contacts_dialer")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'I',
-      contacts: [
+      'title': 'I',
+      'contacts': [
         new Contact('艾佳I', $r("app.media.logo_quick_contacts")),
         new Contact('安安I', $r("app.media.logo_quick_contacts")),
         new Contact('Angela', $r("app.media.logo_quick_contacts")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'J',
-      contacts: [
+      'title': 'J',
+      'contacts': [
         new Contact('白叶J', $r("app.media.logo_quick_contacts_dialer")),
         new Contact('伯明J', $r("app.media.logo_quick_contacts_dialer")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'K',
-      contacts: [
+      'title': 'K',
+      'contacts': [
         new Contact('艾佳K', $r("app.media.logo_quick_contacts")),
         new Contact('安安K', $r("app.media.logo_quick_contacts")),
         new Contact('Angela', $r("app.media.logo_quick_contacts")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'L',
-      contacts: [
+      'title': 'L',
+      'contacts': [
         new Contact('白叶L', $r("app.media.logo_quick_contacts_dialer")),
         new Contact('伯明L', $r("app.media.logo_quick_contacts_dialer")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'Y',
-      contacts: [
+      'title': 'Y',
+      'contacts': [
         new Contact('艾佳Y', $r("app.media.logo_quick_contacts")),
         new Contact('安安Y', $r("app.media.logo_quick_contacts")),
         new Contact('Angela', $r("app.media.logo_quick_contacts")),
-      ],
+      ] as Contact[]
     },
     {
-      title: 'Z',
-      contacts: [
+      'title': 'Z',
+      'contacts': [
         new Contact('白叶Z', $r("app.media.logo_quick_contacts_dialer")),
         new Contact('伯明Z', $r("app.media.logo_quick_contacts_dialer")),
-      ],
+      ] as Contact[]
     },
-  ]
+  ] as Record<string, Contact[]|string>[]
 
   @Builder itemHead(text: string) {
     // 列表分组的头部组件，对应联系人分组A、B等位置的组件
@@ -159,9 +169,9 @@ struct ContactsView {
   build() {
     Stack({alignContent: Alignment.BottomEnd}) {
       List({scroller: this.listScroller}) {
-        ForEach(this.contactsGroups, item => {
-          ListItemGroup({header: this.itemHead(item.title)}) {
-            ForEach(item.contacts, contact => {
+        ForEach(this.contactsGroups, (item: Record<string, Contact[]|string>) => {
+          ListItemGroup({header: this.itemHead(item['title'] as string)}) {
+            ForEach(item.contacts as Contact[], (contact: Contact) => {
               ListItem() {
                 Row() {
                   Image(contact.icon)
@@ -173,7 +183,7 @@ struct ContactsView {
                 .width('100%')
                 .justifyContent(FlexAlign.Start)
               }
-            }, item => item.key)
+            }, (item: Record<string, Contact[]|string>) => item.key as string)
           }
         })
       }

@@ -21,7 +21,7 @@ struct DragInTestPage {
         .visibility(Visibility.Visible)
 
       List({ space: 20, initialIndex: 0 }) {
-        ForEach(this.number, (item) => {
+        ForEach(this.number, (item: string) => {
           ListItem() {
             Text('' + item)
               .width('100%')
@@ -31,7 +31,7 @@ struct DragInTestPage {
               .textAlign(TextAlign.Center)
               .backgroundColor(0xFFFFFF)
           }
-        }, item => item)
+        }, (item: string) => item)
 
         ListItem() {
           Text('Across Window Drag This')

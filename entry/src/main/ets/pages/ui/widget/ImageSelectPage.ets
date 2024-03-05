@@ -1,12 +1,13 @@
 import picker from '@ohos.file.picker';
 import http from '@ohos.net.http';
 import image from '@ohos.multimedia.image';
+import base from '@ohos.base';
 
 @Entry
 @Component
 struct ImageSelectPage {
   @State imgDatas: string[] = [];
-  @State image: PixelMap = null
+  @State image?: PixelMap = undefined
 
   // 获取照片url集
   getAllImg() {
@@ -20,7 +21,7 @@ struct ImageSelectPage {
       photoPicker.select(PhotoSelectOptions).then((PhotoSelectResult) => {
         this.imgDatas = PhotoSelectResult.photoUris;
         console.info('PhotoViewPicker.select successfully, PhotoSelectResult uri: ' + JSON.stringify(PhotoSelectResult));
-      }).catch((err) => {
+      }).catch((err: base.BusinessError) => {
         console.error(`PhotoViewPicker.select failed with. Code: ${err.code}, message: ${err.message}`);
       });
     } catch (err) {
@@ -41,12 +42,12 @@ struct ImageSelectPage {
       }
 
       Grid() {
-        ForEach(this.imgDatas, item => {
+        ForEach(this.imgDatas, (item: string) => {
           GridItem() {
             Image(item)
               .width(200)
           }
-        }, item => JSON.stringify(item))
+        }, (item: string) => JSON.stringify(item))
       }
     }.width('100%').height('100%')
   }
@@ -59,14 +60,14 @@ struct ImageSelectPage {
         } else {
           let code = data.responseCode;
           if (http.ResponseCode.OK === data.responseCode) {
-            let res: any = data.result
+            let res: string = data.result as string
             let imageSource = image.createImageSource(res);
-            let options = {
-              alphaType: 0, // 透明度
+            let options: image.DecodingOptions = {
+              // alphaType: 0, // 透明度
               editable: false, // 是否可编辑
-              pixelFormat: 3, // 像素格式
-              scaleMode: 1, // 缩略值
-              size: { height: 100, width: 100 }
+              // pixelFormat: 3, // 像素格式
+              // scaleMode: 1, // 缩略值
+              desiredSize: { height: 100, width: 100 }
             } // 创建图片大小
             imageSource.createPixelMap(options).then((pixelMap) => {
               this.image = pixelMap

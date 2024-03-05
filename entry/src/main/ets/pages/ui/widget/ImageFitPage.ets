@@ -48,17 +48,17 @@ struct ImageFitPage {
               0, 0, 1, 0, 0,
               0, 0, 0, 1, 0])
           .overlay('None', { align: Alignment.Bottom, offset: { x: 0, y: -20 } })
-          .onComplete((msg: {
-            width: number,
-            height: number,
-            componentWidth: number,
-            componentHeight: number
-          }) => {
-            // this.widthValue = msg.width
-            // this.heightValue = msg.height
-            // this.componentWidth = msg.componentWidth
-            // this.componentHeight = msg.componentHeight
-          })
+          // .onComplete((msg: {
+          //   width: number,
+          //   height: number,
+          //   componentWidth: number,
+          //   componentHeight: number
+          // }) => {
+          //   this.widthValue = msg.width
+          //   this.heightValue = msg.height
+          //   this.componentWidth = msg.componentWidth
+          //   this.componentHeight = msg.componentHeight
+          // })
             // 图片获取失败，打印结果
           .onError(() => {
             console.info('load image fail')

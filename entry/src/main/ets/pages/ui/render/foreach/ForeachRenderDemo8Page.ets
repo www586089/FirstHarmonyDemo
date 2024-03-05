@@ -15,7 +15,7 @@ struct ForeachRenderDemo8Page {
 
       ForEach(this.simpleList, (item: string) => {
         ForeachRenderDemo8ChildItem({ item: item })
-      }, (item) => item)
+      }, (item: string) => item)
     }
     .justifyContent(FlexAlign.Center)
     .width('100%')

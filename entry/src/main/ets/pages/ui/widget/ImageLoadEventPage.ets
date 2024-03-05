@@ -14,17 +14,17 @@ struct ImageLoadEventPage {
           .height(150)
           .margin(15)
           .objectFit(ImageFit.Contain)
-          .onComplete((msg: {
-            width: number,
-            height: number,
-            componentWidth: number,
-            componentHeight: number
-          }) => {
-            this.widthValue = msg.width
-            this.heightValue = msg.height
-            this.componentWidth = msg.componentWidth
-            this.componentHeight = msg.componentHeight
-          })// 图片获取失败，打印结果
+          // .onComplete((msg: {
+          //   width: number,
+          //   height: number,
+          //   componentWidth: number,
+          //   componentHeight: number
+          // }) => {
+          //   this.widthValue = msg.width
+          //   this.heightValue = msg.height
+          //   this.componentWidth = msg.componentWidth
+          //   this.componentHeight = msg.componentHeight
+          // })// 图片获取失败，打印结果
           .onError(() => {
             console.info('load image fail')
           })

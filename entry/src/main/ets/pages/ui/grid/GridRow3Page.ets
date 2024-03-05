@@ -12,7 +12,7 @@ struct GridRow3Page {
       Column() {
         Row() {
           GridRow({ columns: 3, gutter: { x: 10, y: 20 } }) {
-            ForEach(this.bgColors, (item, index) => {
+            ForEach(this.bgColors, (item: Color, index) => {
               GridCol() {
                 Row() {
                   Text(`${index + 1}`)
@@ -31,7 +31,7 @@ struct GridRow3Page {
 
         Row() {
           GridRow({ columns: 8 }) {
-            ForEach(this.bgColors, (item, index) => {
+            ForEach(this.bgColors, (item: Color, index) => {
               GridCol() {
                 Row() {
                   Text(`${index + 1}`)

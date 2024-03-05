@@ -1,7 +1,7 @@
 // 构造LocalStorage实例
-let storage3 = new LocalStorage({ 'PropA': 47 });
+let storage3 = new LocalStorage({ 'PropA': 47 } as Record<string, number>);
 // 调用link（api9以上）接口构造'PropA'的双向同步数据，linkToPropA 是全局变量
-let linkToPropA = storage3.link('PropA');
+let linkToPropA: SubscribedAbstractProperty<number> = storage3.link('PropA');
 
 /**
  * @LocalStorageLink和LocalStorage双向同步的简单场景

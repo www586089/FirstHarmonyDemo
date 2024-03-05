@@ -15,12 +15,12 @@ struct ParamsShowPage {
 
 
   private personId:number = 0;
-  private personAge: number;
+  private personAge: number = 0;
 
   aboutToAppear() {
-    const params = router.getParams(); // 获取传递过来的参数对象
-    this.personId = params['id']; // 获取id属性的值
-    this.personAge = params['info'].age; // 获取age属性的值
+    const params = router.getParams() as Record<string, number|object>; // 获取传递过来的参数对象
+    this.personId = params['id'] as number; // 获取id属性的值
+    this.personAge = (params['info'] as object)['age'] as number; // 获取age属性的值
   }
 
   build() {

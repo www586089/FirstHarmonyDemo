@@ -4,7 +4,7 @@
 struct CalendarLayoutPage {
   private scroller: Scroller = new Scroller()
   private headLabel: string[] = ['一', '二', '三', '四', '五', '六', '日']
-  private curDate: Date;
+  private curDate: Date = new Date;
   @State curDateStr: string = ''
   @State dateArray: number[] = []
 
@@ -20,18 +20,21 @@ struct CalendarLayoutPage {
     for (let index = 0; index < monthLength; index++) {
       this.dateArray.push(index + 1)
     }
-    this.curDateStr = `${this.curDate.getFullYear()}-${this.curDate.getMonth() + 1}`
+    this.curDateStr = `${this.curDate?.getFullYear()}-${this.curDate?.getMonth() + 1}`
   }
 
   private nextMonth() {
-    this.curDate.setMonth(this.curDate.getMonth() + 1)
+    this.curDate?.setMonth(this.curDate.getMonth() + 1)
   }
 
   private prevMonth() {
-    this.curDate.setMonth(this.curDate.getMonth() - 1)
+    this.curDate?.setMonth(this.curDate.getMonth() - 1)
   }
 
-  private getMonthLength(date: Date): number {
+  private getMonthLength(date?: Date): number {
+    if (null == date) {
+      return 0;
+    }
     let copyDate = new Date(date.getFullYear(), date.getMonth() + 1, 0)
     return copyDate.getDate()
   }
@@ -47,13 +50,13 @@ struct CalendarLayoutPage {
           .padding({ left: 24, right: 24 })
           .borderRadius(24)
         Row({ space: 8 }) {
-          ForEach(this.headLabel, (item) => {
+          ForEach(this.headLabel, (item: string) => {
             Text(item).fontSize(14).layoutWeight(1).textAlign(TextAlign.Center).height('40%').borderRadius(26).backgroundColor('#67c8ff')
-          }, item => JSON.stringify(item))
+          }, (item: string) => JSON.stringify(item))
         }.height(52).backgroundColor('#999').margin({top: 24})
 
         Grid() {
-          ForEach(this.dateArray, (item) => {
+          ForEach(this.dateArray, (item: number) => {
             GridItem() {
               Button(item + "")
                 .width(52)
@@ -61,7 +64,7 @@ struct CalendarLayoutPage {
                 .borderWidth(1)
                 .borderColor('#67c8ff')
             }
-          }, item => JSON.stringify(item))
+          }, (item: string) => JSON.stringify(item))
         }
         .columnsTemplate('1fr 1fr 1fr 1fr 1fr 1fr 1fr')
         .columnsGap(5)

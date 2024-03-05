@@ -33,7 +33,7 @@ struct MessageView {
 
   build() {
     List() {
-      ForEach(this.messages, (item, index) => {
+      ForEach(this.messages, (item: string, index) => {
         ListItem() {
           Row() {
             Badge({
@@ -55,7 +55,7 @@ struct MessageView {
           .justifyContent(FlexAlign.Start)
         }.height(48)
         .swipeAction({ end: this.itemEnd.bind(this, index) }) // 设置侧滑属性
-      }, item => item)
+      }, (item: string) => item)
     }.divider(
       {
         strokeWidth: 1, color: Color.Red, startMargin: 12, endMargin: 12

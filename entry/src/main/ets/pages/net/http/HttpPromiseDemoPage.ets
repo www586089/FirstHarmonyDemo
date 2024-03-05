@@ -1,4 +1,5 @@
-import http from '@ohos.net.http'
+import http from '@ohos.net.http';
+import base from '@ohos.base';
 
 @Entry
 @Component
@@ -14,7 +15,7 @@ struct HttpPromiseDemoPage {
       promise.then((data) => {
         this.poem = JSON.parse(`${data.result}`).result.name
         this.from = JSON.parse(`${data.result}`).result.from
-      }).catch((e) => {
+      }).catch((e: base.BusinessError) => {
         console.log(JSON.stringify(e))
       })
     }, 2000)

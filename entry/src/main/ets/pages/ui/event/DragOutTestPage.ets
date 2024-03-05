@@ -4,7 +4,7 @@ import image from '@ohos.multimedia.image';
 @Component
 struct DragOutTestPage {
   @State visible: Visibility = Visibility.Visible
-  private pixelMapReader = undefined
+  private pixelMapReader?: PixelMap = undefined
 
   aboutToAppear() {
     console.info('begin to create pixmap has info message: ')
@@ -13,18 +13,24 @@ struct DragOutTestPage {
 
   createPixelMap() {
     let color = new ArrayBuffer(4 * 96 * 96);
-    var buffer = new Uint8Array(color);
-    for (var i = 0; i < buffer.length; i++) {
+    let buffer = new Uint8Array(color);
+    for (let i = 0; i < buffer.length; i++) {
       buffer[i] = (i + 1) % 255;
     }
-    let opts = {
+    // let opts = {
+    //   alphaType: 0,
+    //   editable: true,
+    //   pixelFormat: 4,
+    //   scaleMode: 1,
+    //   size: { height: 196, width: 196 }
+    // }
+    const promise = image.createPixelMap(color, {
       alphaType: 0,
       editable: true,
       pixelFormat: 4,
       scaleMode: 1,
       size: { height: 196, width: 196 }
-    }
-    const promise = image.createPixelMap(color, opts);
+    });
     promise.then((data) => {
       console.info('create pixmap has info message: ' + JSON.stringify(data))
       this.pixelMapReader = data;

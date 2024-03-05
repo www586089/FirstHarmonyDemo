@@ -1,5 +1,6 @@
 AppStorage.SetOrCreate('PropA', 47);
-let appStorage = new LocalStorage({ 'PropA': 48 });
+let pa48: Record<string, number> = { 'PropA': 48 };
+let appStorage = new LocalStorage(pa48);
 
 /**
  * 从UI内部使用AppStorage和LocalStorage
@@ -27,16 +28,17 @@ struct AppStorageDemo1Page {
 function testAppStorage() {
   AppStorage.SetOrCreate('appPropA', 47);
 
-  let storage: LocalStorage = new LocalStorage({ 'appPropA': 17 });
+  let para: Record<string,number> = { 'appPropA': 17 };
+  let storage: LocalStorage = new LocalStorage(para);
   // appPropA in AppStorage == 47, appPropA in LocalStorage == 17
-  let appPropA: number = AppStorage.Get('appPropA')
+  let appPropA: number = AppStorage.Get('appPropA') as number
   console.info(`appPropA in AppStorage = ${appPropA}, appPropA in LocalStorage = ${storage.get<number>('appPropA')}`)
   // link1.get() == 47
-  var link1: SubscribedAbstractProperty<number> = AppStorage.Link('appPropA');
+  let link1: SubscribedAbstractProperty<number> = AppStorage.Link('appPropA');
   // link2.get() == 47
-  var link2: SubscribedAbstractProperty<number> = AppStorage.Link('appPropA');
+  let link2: SubscribedAbstractProperty<number> = AppStorage.Link('appPropA');
   // prop.get() == 47
-  var prop: SubscribedAbstractProperty<number> = AppStorage.Prop('appPropA');
+  let prop: SubscribedAbstractProperty<number> = AppStorage.Prop('appPropA');
 
   link1.set(48); // two-way sync: link1.get() == link2.get() == prop.get() == 48
   prop.set(1); // one-way sync: prop.get() == 1; but link1.get() == link2.get() == 48

@@ -1,6 +1,6 @@
 
 // 创建新实例并使用给定对象初始化
-let storage = new LocalStorage({'PropA' : 47 });
+let storage = new LocalStorage({'PropA' : 47 } as Record<string, number>);
 
 // 使LocalStorage可从@Component组件访问
 @Entry(storage)
@@ -19,7 +19,7 @@ struct LocalStorageDemo1Page {
       Button(`Change LocalStorage + 1`)
         .onClick(() => {
           //直接修改LocalStorage，会同步回@LocalStorageProp标记的属性
-          let value: number = storage.get('PropA')
+          let value: number = storage.get('PropA') as number
           console.log(`value = ${value}`)
           storage.set('PropA', value + 1)
         })

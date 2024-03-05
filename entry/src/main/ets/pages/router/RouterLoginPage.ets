@@ -1,5 +1,6 @@
-import router from '@ohos.router'
-import promptAction from '@ohos.promptAction'
+import router from '@ohos.router';
+import promptAction from '@ohos.promptAction';
+import base from '@ohos.base';
 
 @Entry
 @Component
@@ -74,7 +75,7 @@ function onBackClickV2() {
       // 调用router.back()方法，返回上一个页面
       router.back();
     }
-  }).catch((err) => {
+  }).catch((err: base.BusinessError) => {
     console.error(`Invoke showDialog failed, code is ${err.code}, message is ${err.message}`);
   })
 }

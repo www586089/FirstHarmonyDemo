@@ -9,7 +9,7 @@ struct GridOffsetPage {
     Row() {
       Column() {
         GridRow({}) {
-          ForEach(this.bgColors, (color, index) => {
+          ForEach(this.bgColors, (color: Color, index) => {
             GridCol({ offset: 2 }) {
               Row() {
                 Text('' + index)

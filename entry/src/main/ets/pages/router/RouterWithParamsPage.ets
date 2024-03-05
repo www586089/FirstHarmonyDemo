@@ -2,12 +2,12 @@ import router from '@ohos.router';
 
 
 export class DataModelInfo {
-  age: number;
+  age: number = 0;
 }
 
 export class DataModel {
-  id: number;
-  info: DataModelInfo;
+  id: number = 0;
+  info?: DataModelInfo;
 }
 
 @Entry
@@ -25,10 +25,10 @@ struct RouterWithParamsPage {
 };
 
   onPageShow() {
-    const params = router.getParams(); // 获取传递过来的参数对象
+    const params = router.getParams() as Record<string, number|object>; // 获取传递过来的参数对象
     if (null != params) {
-      const personId = params['id']; // 获取id属性的值
-      const personAge = params['info'].age; // 获取age属性的值
+      const personId = params['id'] as number; // 获取id属性的值
+      const personAge = (params['info'] as object)['age'] as number; // 获取age属性的值
       this.messageReturn = `返回的参数：Id--->${personId}, Age--->${personAge}`
     }
   }

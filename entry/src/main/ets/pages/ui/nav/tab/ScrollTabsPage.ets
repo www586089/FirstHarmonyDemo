@@ -7,11 +7,11 @@ struct ScrollTabsPage {
     Row() {
       Column() {
         Tabs() {
-          ForEach(this.tabs, (tab, index) => {
+          ForEach(this.tabs, (tab: string, index) => {
             TabContent() {
               Text(`${tab}的内容`)
             }.tabBar(tab)
-          }, tab => tab)
+          }, (tab: string) => tab)
         }.barMode(BarMode.Scrollable).barHeight(72).vertical(false)
       }
       .width('100%')

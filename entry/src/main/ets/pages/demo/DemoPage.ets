@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import { FunctionCallType } from '../../utils/Type'
 
 
 @Extend(Text) function fancy(fontWeight: FontWeight, fontSize: number) {
@@ -19,7 +20,7 @@ struct DemoPage {
     .height('5%')
   }
 
-  itemList: object[] = [
+  itemList: FunctionCallType[] = [
     { info: 'ToDoListDemoPage', action: (() => {
       router.pushUrl({ url: 'pages/demo/todo/ToDoListDemoPage' })
     }) },
@@ -31,13 +32,13 @@ struct DemoPage {
 
   build() {
     List() {
-      ForEach(this.itemList, (item) => {
+      ForEach(this.itemList, (item: FunctionCallType) => {
         ListItem() {
           FancyButton({ info: item.info, action: (() => {
-            item.action.call()
+            item.action()
           }) })
         }
-      }, item => item.info)
+      }, (item: FunctionCallType) => item.info)
     }.alignListItem(ListItemAlign.Center)
     .height('100%').width('100%')
   }
@@ -46,7 +47,7 @@ struct DemoPage {
 @Component
 struct FancyButton {
   info: string = "";
-  action: (event?: ClickEvent) => void;
+  action?: (event?: ClickEvent) => void;
 
   @Styles cuteButton() {
     .margin({
@@ -63,7 +64,7 @@ struct FancyButton {
       Text(this.info).fancy(FontWeight.Normal, 20)
     }.cuteButton().type(ButtonType.Capsule).onClick(() => {
       {
-        this.action.call(this)
+        this.action?.()
       }
     })
   }

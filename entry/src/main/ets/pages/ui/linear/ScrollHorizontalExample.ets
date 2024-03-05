@@ -7,7 +7,7 @@ struct ScrollHorizontalExample {
   build() {
     Scroll(this.scroller) {
       Row() {
-        ForEach(this.arr, (item) => {
+        ForEach(this.arr, (item: number) => {
           Text(item.toString())
             .height('90%')
             .width(150)

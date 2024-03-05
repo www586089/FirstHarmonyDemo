@@ -20,7 +20,7 @@ struct NestTabPage {
     Row() {
       Column() {
         Tabs({ barPosition: BarPosition.End }) {
-          ForEach(this.tabsArray, (tabInfo, index) => {
+          ForEach(this.tabsArray, (tabInfo: string, index) => {
             TabContent() {
               /**
                * 注意：这里如果换成curIndex来判断，则会引起不必要的刷新
@@ -35,7 +35,7 @@ struct NestTabPage {
                 MinePage({mineIndex: 3, curIndex: this.curIndex}).backgroundColor('#801008a8f1')
               }
             }.tabBar(this.tabBarBuilder(index))
-          }, (item) => JSON.stringify(item))
+          }, (item: string) => JSON.stringify(item))
         }
         .onChange((index) => {
           this.curIndex = index

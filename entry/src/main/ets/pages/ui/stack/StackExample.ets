@@ -6,7 +6,7 @@ struct StackExample {
   build() {
     Stack({ alignContent: Alignment.Bottom }) {
       Flex({ wrap: FlexWrap.Wrap, justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {
-        ForEach(this.arr, (item) => {
+        ForEach(this.arr, (item: string) => {
           Text(item)
             .width(100)
             .height(100)
@@ -15,7 +15,7 @@ struct StackExample {
             .textAlign(TextAlign.Center)
             .borderRadius(10)
             .backgroundColor(0xFFFFFF)
-        }, item => item)
+        }, (item: string) => item)
       }.width('100%').height('100%')
 
       Flex({ justifyContent: FlexAlign.SpaceAround, alignItems: ItemAlign.Center }) {

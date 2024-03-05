@@ -35,7 +35,7 @@ struct SimpleContacts {
           .width('100%')
           .justifyContent(FlexAlign.Start)
         }
-      }, item => item.key)
+      }, (item: Contact) => item.key)
     }
     .width('100%').height('100%')
   }
